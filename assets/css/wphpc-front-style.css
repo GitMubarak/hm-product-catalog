@@ -1,0 +1,194 @@
+.wphpc-main-wrapper {
+    border: 1 px solid #000;
+}
+
+.wphpc-main-wrapper .wphpc-item {
+    border: 1px solid #DDD;
+    padding: 5px;
+    min-height: 310px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 24.38%;
+}
+
+.wphpc-main-wrapper .wphpc-item img {
+    border: 0px solid #FF0000;
+    height: 150px;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+.wphpc-main-wrapper .wphpc-item a {
+    font-size: 12px;
+    display: inline-block;
+    border: 0px solid #000;
+    width: 100%;
+    outline: none;
+}
+
+.wphpc-main-wrapper .wphpc-item a:active {
+    outline: none;
+    text-decoration: none!important;
+}
+
+.wphpc-main-wrapper .wphpc-item span {
+    font-size: 11px;
+    display: inline-block;
+    border: 0px solid #000;
+    width: 100%;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+.wphpc-main-wrapper .wphpc-item span.sale-price b {
+    font-size: 16px;
+}
+
+
+/* Details Page css */
+
+.wphpc-details-wrapper {
+    width: 1000px;
+    margin: 150px auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+    border: 0px solid #000;
+}
+
+.wphpc-details-wrapper .wphpc-details-image {
+    min-height: 100px;
+    padding: 5px;
+    margin-right: 20px;
+    border: 0px solid #009900;
+    width: 350px;
+}
+
+.wphpc-details-wrapper .wphpc-details-image img {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.wphpc-details-wrapper .wphpc-details-description {
+    border: 0px solid #000;
+    flex: 1;
+}
+
+.wphpc-details-wrapper .wphpc-details-description h5.wphpc-details-book-title {
+    margin-bottom: 10px;
+    color: #242424;
+    font-size: 24px;
+}
+
+.wphpc-details-wrapper .wphpc-details-description span {
+    font-size: 14px;
+    display: inline-block;
+    border: 0px solid #000;
+    width: 100%;
+    margin: 0px!important;
+    padding: 0px!important;
+    margin-bottom: 10px!important;
+}
+
+.wphpc-details-wrapper .wphpc-details-description span b {
+    color: #242424;
+    width: 100px;
+    border: 0px solid #FF0000;
+    display: inline-block;
+}
+
+.wphpc-details-wrapper .wphpc-details-description-full {
+    border: 0px solid #000;
+    margin-top: 20px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+.wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-title {
+    border: 0px solid #009900;
+    padding: 0 8px;
+}
+
+.wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-title hr {
+    margin-bottom: 10px;
+}
+
+.wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-content {
+    padding: 0 8px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+@media(max-width:500px) {
+    .wphpc-main-wrapper .wphpc-item {
+        width: 100%;
+    }
+    .wphpc-main-wrapper .wphpc-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .wphpc-details-wrapper {
+        display: block;
+        width: 100%;
+    }
+    .wphpc-details-wrapper .wphpc-details-image {
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    .wphpc-details-wrapper .wphpc-details-description {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 501px) {
+    .wphpc-main-wrapper .wphpc-item {
+        width: 48.88%;
+    }
+    .wphpc-details-wrapper {
+        display: block;
+        width: 100%;
+    }
+    .wphpc-details-wrapper .wphpc-details-image {
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .wphpc-details-wrapper .wphpc-details-image img {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .wphpc-details-wrapper .wphpc-details-description {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 801px) {
+    .wphpc-main-wrapper .wphpc-item {
+        width: 31.90%;
+        min-height: 297px;
+    }
+    .wphpc-details-wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .wphpc-details-wrapper .wphpc-details-image {
+        width: 300px;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-right: 0px;
+    }
+    .wphpc-details-wrapper .wphpc-details-description {
+        flex: 1;
+        padding: 10px;
+    }
+}
