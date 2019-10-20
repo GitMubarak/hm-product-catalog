@@ -238,6 +238,9 @@ class WPHPC_Admin
 		$events_meta['wphpc_regular_price'] 	= (!empty($_POST['wphpc_regular_price']) && (sanitize_text_field($_POST['wphpc_regular_price'])!='')) ? sanitize_text_field($_POST['wphpc_regular_price']) : '';
 		$events_meta['wphpc_sale_price'] 		= (!empty($_POST['wphpc_sale_price']) && (sanitize_text_field($_POST['wphpc_sale_price'])!='')) ? sanitize_text_field($_POST['wphpc_sale_price']) : '';
 		$events_meta['wphpc_currency'] 			= (!empty($_POST['wphpc_currency']) && (sanitize_text_field($_POST['wphpc_currency'])!='')) ? sanitize_text_field($_POST['wphpc_currency']) : '';
+		$events_meta['wphpc_weight'] 			= (!empty($_POST['wphpc_weight']) && (sanitize_text_field($_POST['wphpc_weight'])!='')) ? sanitize_text_field($_POST['wphpc_weight']) : '';
+		$events_meta['wphpc_status'] 			= (!empty($_POST['wphpc_status']) && (sanitize_text_field($_POST['wphpc_status'])!='')) ? sanitize_text_field($_POST['wphpc_status']) : '';
+		
 		
 		foreach ( $events_meta as $key => $value ) :
 			if ( 'revision' === $post->post_type ) {

@@ -6,6 +6,13 @@ $wphpcProductsArr = array(
                             'post_status' => 'publish',
                             'order' => 'DESC',
                             //'posts_per_page' => 10
+                            'meta_query' => array(
+                                                        array(
+                                                            'key' => 'wphpc_status',
+                                                            'value' => 'active',
+                                                            'compare' => 'LIKE'
+                                                        )
+                                                )
                           );
 
 if($catelog!=''){

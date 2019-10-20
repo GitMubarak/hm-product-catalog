@@ -16,6 +16,12 @@
     </div>
     <div class="wphpc-details-description">
         <h5 class="wphpc-details-book-title"><?php the_title(); ?></h5>
+        <?php
+        $wphpcShortDescription = get_post_meta( $post->ID, 'wphpc_short_description', true );
+        if ( !empty( $wphpcShortDescription ) ){
+            echo '<span>' . wp_kses_post($wphpcShortDescription) . '</span>';
+        }
+        ?>
         <span>
             <b>SKU:</b>
             <?php
@@ -46,6 +52,21 @@
         $wphpcSalePrice = get_post_meta( $post->ID, 'wphpc_sale_price', true );
         if ( !empty( $wphpcSalePrice ) ){
             echo '<span class="sale-price"><b>Sale Price:</b> <b>' . $wphpcCurrency . ' ' . $wphpcSalePrice . '</b></span>';
+        }
+        ?>
+        <?php
+        $wphpcWeight = get_post_meta( $post->ID, 'wphpc_weight', true );
+        if ( !empty( $wphpcWeight ) ){
+            echo '<span><b>Weight:</b> ' . $wphpcWeight . '</span>';
+        }
+        ?>
+        <?php
+        $wphpcStatus = get_post_meta( $post->ID, 'wphpc_status', true );
+        if ( 'active' == $wphpcStatus ){
+            echo '<span class="available"><b>Status:</b> <b style="color:green;">Available</b></span>';
+        }
+        if ( 'inactive' == $wphpcStatus ){
+            echo '<span class="available"><b>Status:</b> <b style="color:red;">Not Available</b></span>';
         }
         ?>
     </div>
