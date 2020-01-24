@@ -1,6 +1,8 @@
 <?php
-$catelog =  isset($attr['catalog']) ? $attr['catalog'] : '';
-
+$wphpcCatelog =  isset($attr['catalog']) ? $attr['catalog'] : '';
+$wphpcDisplay = isset($attr['display']) ? $attr['display'] : '';
+$wphpcPagination = isset($attr['pagination']) ? $attr['pagination'] : false;
+$wphpcPaged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $wphpcProductsArr = array(
                             'post_type' => 'products',
                             'post_status' => 'publish',
@@ -15,20 +17,29 @@ $wphpcProductsArr = array(
                                                 )
                           );
 
-if($catelog!=''){
+if($wphpcDisplay!=''){
+  $wphpcProductsArr['posts_per_page'] = $wphpcDisplay;
+}
+
+if($wphpcCatelog!=''){
   $wphpcProductsArr['tax_query'] = array(
                                           array(
                                                   'taxonomy' => 'product_catalog',   // taxonomy name
                                                   //'field' => 'portfolio categories',    // term_id, slug or name
                                                   //'terms' => 'portfolio-category',      // term id, term slug or term name
                                                   'field' => 'name',
-                                                  'terms' => $catelog
+                                                  'terms' => $wphpcCatelog
                                               )
                                           );
+}
+
+if($wphpcPagination=='true'){
+  $wphpcProductsArr['paged'] = $wphpcPaged;
 }
 wp_reset_query();
 $wphpcProducts = new WP_Query($wphpcProductsArr);
 ?>
+
 <div class="wphpc-main-wrapper w3-row-padding w3-padding-16 w3-center">
   <?php while($wphpcProducts->have_posts()) : $wphpcProducts->the_post(); global $post; ?>
   <div class="wphpc-item w3-quarter">
@@ -87,3 +98,25 @@ $wphpcProducts = new WP_Query($wphpcProductsArr);
   </div>
   <?php endwhile; ?>
 </div>
+<?php if($wphpcPagination=='true'){ ?>
+<div class="wphpc-pagination">
+      <?php
+      $wphpcTotalPages = $wphpcProducts->max_num_pages;
+
+      if ($wphpcTotalPages > 1){
+  
+          $wphpcCurrentPage = max(1, get_query_var('paged'));
+  
+          echo paginate_links(array(
+              'base'      => get_pagenum_link(1) . '%_%',
+              'format'    => '/page/%#%',
+              'current'   => $wphpcCurrentPage,
+              'total'     => $wphpcTotalPages,
+              'prev_text' => __('« prev'),
+              'next_text' => __('next »'),
+          ));
+      }
+      wp_reset_postdata();
+      ?>
+</div>
+<?php } ?>

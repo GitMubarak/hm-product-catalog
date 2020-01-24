@@ -15,7 +15,7 @@ A simple plugin to display products in your Post/Page area. Use shortcode: [hm_p
 
 [HM Product Catalog](http://www.hossnimubarak.com) is a Responsive Product catalog plugin to display Products in your Post/Page area. 
 In Product details page it display SKU, Category, Regular Price, Sale Price, Description etc.
-Display anywhere in your Page or Post by using shortcode: [hm_product_catalog] or [hm_product_catalog catalog="Mobile"].
+Display anywhere in your Page or Post by using shortcode: [hm_product_catalog].
 
 WP Products Catalog is a simple, effective and powerful plugin to showcase your desired Products.
 
@@ -39,7 +39,7 @@ WP Products Catalog is a simple, effective and powerful plugin to showcase your 
 
 <strong> Show Products of a specific Catalog </strong>
 
-<pre> [hm_product_catalog catalog="Mobile"]</pre>
+<pre> [hm_product_catalog catalog="Mobile"] </pre>
 
 
 **📋 Feedback/Rating:**

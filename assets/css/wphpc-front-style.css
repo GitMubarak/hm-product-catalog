@@ -45,6 +45,30 @@
 }
 
 
+/* Pagination */
+
+.wphpc-pagination {
+    width: 100%;
+    text-align: center;
+}
+
+.wphpc-pagination .page-numbers {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 2px 0 0;
+    border: 1px solid #eee;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.wphpc-pagination .page-numbers.current,
+a.page-numbers:hover {
+    background: #f9f9f9;
+}
+
+
 /* Details Page css */
 
 .wphpc-details-wrapper {
