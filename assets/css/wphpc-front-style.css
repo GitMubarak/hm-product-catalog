@@ -5,25 +5,45 @@
 .wphpc-main-wrapper .wphpc-item {
     border: 1px solid #DDD;
     padding: 5px;
-    min-height: 310px;
+    min-height: 320px;
     margin-right: 5px;
     margin-bottom: 5px;
-    width: 24.38%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.wphpc-main-wrapper .wphpc-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wphpc-main-wrapper .wphpc-item.w3-quarter {
+    width: 24.35%;
 }
 
 .wphpc-main-wrapper .wphpc-item img {
     border: 0px solid #FF0000;
     height: 150px;
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .wphpc-main-wrapper .wphpc-item a {
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 400;
     display: inline-block;
     border: 0px solid #000;
     width: 100%;
     outline: none;
+    line-height: 20px;
+    color: #242424;
+}
+
+.wphpc-main-wrapper .wphpc-item a:hover {
+    color: #999;
+}
+
+.wphpc-main-wrapper .wphpc-item a.active {
+    color: #242424;
 }
 
 .wphpc-main-wrapper .wphpc-item a:active {
@@ -38,6 +58,25 @@
     width: 100%;
     margin: 0px!important;
     padding: 0px!important;
+}
+
+.wphpc-main-wrapper .wphpc-item .regular-price span {
+    font-size: 16px;
+    display: inline;
+    border: 0px solid #000;
+    width: 100%;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+.wphpc-main-wrapper .wphpc-item .regular-price span.price-before {
+    color: #CC0000;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.wphpc-main-wrapper .wphpc-item .regular-price span.price-after {
+    color: #009900;
 }
 
 .wphpc-main-wrapper .wphpc-item span.sale-price b {
@@ -150,6 +189,9 @@ a.page-numbers:hover {
     .wphpc-main-wrapper .wphpc-item {
         width: 100%;
     }
+    .wphpc-main-wrapper .wphpc-item.w3-quarter {
+        width: 100%;
+    }
     .wphpc-main-wrapper .wphpc-item img {
         width: 100%;
         height: auto;
@@ -171,8 +213,8 @@ a.page-numbers:hover {
 }
 
 @media only screen and (max-width: 800px) and (min-width: 501px) {
-    .wphpc-main-wrapper .wphpc-item {
-        width: 48.88%;
+    .wphpc-main-wrapper .wphpc-item.w3-quarter {
+        width: 48.46%;
     }
     .wphpc-details-wrapper {
         display: block;
@@ -196,8 +238,10 @@ a.page-numbers:hover {
 
 @media only screen and (max-width: 1200px) and (min-width: 801px) {
     .wphpc-main-wrapper .wphpc-item {
-        width: 31.90%;
         min-height: 297px;
+    }
+    .wphpc-main-wrapper .wphpc-item.w3-quarter {
+        width: 32.49%;
     }
     .wphpc-details-wrapper {
         display: flex;

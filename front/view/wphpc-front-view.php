@@ -48,21 +48,13 @@ $wphpcProducts = new WP_Query($wphpcProductsArr);
         the_post_thumbnail();
     }
     else { ?>
-      <img src="img_snow.jpg" alt="Snow" style="width:100%">
-    <?php 
-    } 
-    $wphpcLink = get_post_meta( $post->ID, 'wphpc_download_link', true );
-    if ( !empty( $wphpcLink ) ){
-      $wphpcLink2 = $wphpcLink;
-    } else{
-      $wphpcLink2 = "#";
-    }
-    ?>
+      <img src="img_snow.jpg" alt="Snow">
+    <?php } ?>
     <a href="<?php echo get_the_permalink($post->ID); ?>" target="blank">
         <?php 
           $wphpcTitleLen = strlen(get_the_title());
           if($wphpcTitleLen > 50){
-            echo substr(get_the_title(), 0, 50) . '...';
+            echo substr(get_the_title(), 0, 40) . '...';
           } else{
             the_title();
           }
@@ -75,25 +67,22 @@ $wphpcProducts = new WP_Query($wphpcProductsArr);
       echo $wphpcCategory[0]->name;
       ?>
     </span>
-    <span class="regular-price">
-      Regular Price:
+    <div class="regular-price">
+      Price:
       <?php
       $wphpcRegularPrice = get_post_meta( $post->ID, 'wphpc_regular_price', true );
+      $wphpcSalePrice = get_post_meta( $post->ID, 'wphpc_sale_price', true );
+      if ( empty( $wphpcSalePrice ) ){
+        echo ( !empty( $wphpcRegularPrice ) ) ? '<span class="price-after">' . $wphpcRegularPrice . '</span>' : '';
+      } else {
+        echo '<span class="price-before">' . $wphpcRegularPrice . '</span> <span class="price-after">' . $wphpcSalePrice . '</span>';
+      }
       $wphpcCurrency = get_post_meta( $post->ID, 'wphpc_currency', true );
       if ( !empty( $wphpcCurrency ) ){
-          echo $wphpcCurrency . ' ';
-      }
-      if ( !empty( $wphpcRegularPrice ) ){
-          echo $wphpcRegularPrice;
+          echo ' ' . $wphpcCurrency;
       }
       ?>
-    </span>
-    <?php
-    $wphpcSalePrice = get_post_meta( $post->ID, 'wphpc_sale_price', true );
-    if ( !empty( $wphpcSalePrice ) ){
-        echo '<span class="sale-price">Sale Price: <b>' . $wphpcCurrency . ' ' . $wphpcSalePrice . '</b></span>';
-    }
-    ?>
+    </div>
     
   </div>
   <?php endwhile; ?>
@@ -112,8 +101,8 @@ $wphpcProducts = new WP_Query($wphpcProductsArr);
               'format'    => '/page/%#%',
               'current'   => $wphpcCurrentPage,
               'total'     => $wphpcTotalPages,
-              'prev_text' => __('« prev'),
-              'next_text' => __('next »'),
+              'prev_text' => __('« '),
+              'next_text' => __(' »'),
           ));
       }
       wp_reset_postdata();

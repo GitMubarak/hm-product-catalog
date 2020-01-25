@@ -3,7 +3,7 @@ Contributors: mhmrajib
 Donate link: https://www.paypal.me/mhmrajib/2
 Tags: catalog, product, product catalog, product catalogue, products
 Requires at least: 4.6
-Tested up to: 5.3
+Tested up to: 5.3.2
 Stable tag: 1.2
 Requires PHP: 5.6
 License: GPLv2 or later
