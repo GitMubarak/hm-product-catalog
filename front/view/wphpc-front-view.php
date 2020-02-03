@@ -38,6 +38,9 @@ if($wphpcPagination=='true'){
 }
 wp_reset_query();
 $wphpcProducts = new WP_Query($wphpcProductsArr);
+
+$wphpcGeneralSettings = stripslashes_deep(unserialize(get_option('wphpc_general_settings')));
+$wphpcDetailsIsSxternal = ($wphpcGeneralSettings['wphpc_details_is_external'] == 1) ? ' target="_blank"' : '';
 ?>
 
 <div class="wphpc-main-wrapper w3-row-padding w3-padding-16 w3-center">
@@ -50,7 +53,7 @@ $wphpcProducts = new WP_Query($wphpcProductsArr);
     else { ?>
       <img src="img_snow.jpg" alt="Snow">
     <?php } ?>
-    <a href="<?php echo get_the_permalink($post->ID); ?>" target="blank">
+    <a href="<?php echo get_the_permalink($post->ID); ?>" <?php printf('%s', $wphpcDetailsIsSxternal); ?>>
         <?php 
           $wphpcTitleLen = strlen(get_the_title());
           if($wphpcTitleLen > 50){

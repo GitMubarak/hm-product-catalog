@@ -12,6 +12,21 @@ class WPHPC_Admin
 		$this->wphpc_assets_prefix = substr(WPHPC_PRFX, 0, -1) . '-';
 	}
 	
+	
+	/**
+	*	Loading admin menu
+	*/
+	function wphpc_admin_menu(){
+		$wphpc_cpt_menu = 'edit.php?post_type=products';
+		add_submenu_page( 	$wphpc_cpt_menu, 
+							esc_html__('Settings', WPHPC_TXT_DOMAIN),
+							esc_html__('Settings', WPHPC_TXT_DOMAIN),
+							'manage_options', 
+							'wphpc-settings-section', 
+							array( $this, WPHPC_PRFX . 'settings')
+						);
+	}
+
 	/**
 	*	Loading admin panel assets
 	*/
@@ -256,5 +271,16 @@ class WPHPC_Admin
 			}
 		endforeach;
 	}
+
+	function wphpc_settings(){
+		require_once WPHPC_PATH . 'admin/view/' . $this->wphpc_assets_prefix . 'admin-settings.php';
+	}
+
+	function wphpc_display_notification($type, $msg){ ?>
+		<div class="wphpc-alert <?php printf('%s', $type); ?>">
+			<span class="wphpc-closebtn">&times;</span> 
+			<strong><?php esc_html_e(ucfirst($type), WPHPC_TXT_DOMAIN); ?>!</strong> <?php esc_html_e($msg, WPHPC_TXT_DOMAIN); ?>
+		</div>
+	<?php }
 }
 ?>

@@ -1,4 +1,4 @@
-#wphpc_shortcode{
+#wphpc_shortcode {
     padding: 10px;
     text-align: center;
     border: 2px dotted #FF0000;
@@ -7,3 +7,45 @@
     font-weight: 600;
     max-width: 430px;
 }
+
+
+/* Alert Styles Started */
+
+.wphpc-alert {
+    padding: 20px!important;
+    color: white;
+}
+
+.wphpc-alert.success {
+    background-color: #6ABD6E;
+}
+
+.wphpc-alert.error {
+    background-color: #F66358;
+}
+
+.wphpc-alert.warning {
+    background-color: #FFAA2B;
+}
+
+.wphpc-alert.info {
+    background-color: #47A8F5;
+}
+
+.wphpc-closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wphpc-closebtn:hover {
+    color: black;
+}
+
+
+/* Alert Styles Ended */

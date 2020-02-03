@@ -31,6 +31,7 @@ class WPHPC_Master {
 		$this->wphpc_loader->add_action( 'init', $wphpc_admin, WPHPC_PRFX . 'taxonomy_for_products', 0 );
 		$this->wphpc_loader->add_action( 'add_meta_boxes', $wphpc_admin, WPHPC_PRFX . 'product_details_metaboxes' );
 		$this->wphpc_loader->add_action( 'save_post', $wphpc_admin, WPHPC_PRFX . 'save_product_meta', 1, 1 );
+		$this->wphpc_loader->add_action( 'admin_menu', $wphpc_admin, WPHPC_PRFX . 'admin_menu', 0 );
 	}
 
 	function wphpc_trigger_front_hooks(){
