@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/mhmrajib/2
 Tags: catalog, product, product catalog, product catalogue, products
 Requires at least: 4.6
 Tested up to: 5.3.2
-Stable tag: 1.2
+Stable tag: 1.3
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,15 +31,25 @@ WP Products Catalog is a simple, effective and powerful plugin to showcase your 
 * Fully Responsive Plugin
 * Custom post type – add Product like a post
 * You can Add Product Title/Name, Description, Short Description, SKU, Currency Icon, Weight, Status, Product Image, Regular Price , Sale Price etc.
+* Display product limit added
+* Pagination included
+* Old price, New price styles included
+* Product hover effect added
 
 ➡️Useage of Shortcode:⬅️
-<strong> Show all products </strong>
+
+<strong> Show All Products </strong>
 
 <pre> [hm_product_catalog] </pre>
+
+<strong> Display 4 Products With Pagination </strong>
+
+<pre> [hm_product_catalog display=4 pagination=true] </pre>
 
 <strong> Show Products of a specific Catalog </strong>
 
 <pre> [hm_product_catalog catalog="Mobile"] </pre>
+<pre> [hm_product_catalog catalog='Mobile'] </pre>
 
 
 **📋 Feedback/Rating:**
@@ -87,16 +97,38 @@ Install HM Product Catalog as a regular WordPress plugin. Here are different way
 
 Please go to HM Product Catalog menu, and add your desired Prodcuts.
 
+= Prodcut not showing Catalog wise =
+
+Please check the double/single quatation mark carefully. Don't copy paste.
+
+= Nothing showing at all!!! =
+
+flush_rewrite_rules() as soon as you register the custom post type. It appears that they have not been rewritten yet, that is, most probably, why you're getting an embarrassing message.
+Alternatively you can go to Settings -> Permalinks -> Save changes, which calls on flush_rewrite_rules() for you.
+
 
 == Screenshots ==
 
-1. Product showing at Frontpage
-2. Product details page
-3. Adding prodcut in admin section. Go to HM Product Catalog > Add New
-4. Using the shortcode in any page or post
+1. Adding prodcut in admin section. Go to HM Product Catalog > Add New
+2. Using the shortcode in any page
+3. Displaying all products at front page
+4. Displaying 4 products with pagination
+5. Displying products of Clothing category
+6. A product details page
 
 
 == Changelog ==
+
+= 1.2 =
+* Product pagination added
+* Display with product limit added
+* Pagination styles added
+* Regular price and discounted price styles added
+* Product title font size increased
+* Product hover effect added
+* Responsive layout improved (for four products)
+* Code changes
+* Minor bug fixes
 
 = 1.1 =
 * New field added: Short Description, Weight, Status
