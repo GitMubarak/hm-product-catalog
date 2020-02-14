@@ -35,6 +35,11 @@ WP Products Catalog is a simple, effective and powerful plugin to showcase your 
 * Pagination included
 * Old price, New price styles included
 * Product hover effect added
+* Open product details page on the same tab or a new tab
+* Product Category Label option
+* Product Price Label option
+* Display column option
+
 
 ➡️Useage of Shortcode:⬅️
 
@@ -62,12 +67,12 @@ If you find this plugin helpful, feel free to give us your valuable review and s
 👉 [WP Top News](https://wordpress.org/plugins/wp-top-news/) Top News, Breaking News, Headlines Plugin
 👉 [Tiny Bar](https://wordpress.org/plugins/tiny-bar/) Display a bar at Top or Bottom
 👉 [WP Books Gallery](https://wordpress.org/plugins/wp-books-gallery/) WP Books Gallery
+👉 [HM Resume Manager](https://wordpress.org/plugins/hm-resume-manager/) A resume manager plugin
 👉 [HM Wc Product Advertiser](https://wordpress.org/plugins/hm-wc-product-advertiser/) Wocommerce Product Advertiser
 👉 [HM – Cool Author Box](https://wordpress.org/plugins/hm-cool-author-box-widget/) Author Box plugin
 👉 [WP Scroll To Post](https://wordpress.org/plugins/wp-scroll-to-post/) Display random post(Single) at the bottom right corner
 👉 [HM Recent Posts Widget](https://wordpress.org/plugins/hm-recent-posts-widget/) Ticker Post plugin
 👉 [WP Alert Bars](https://wordpress.org/plugins/wp-alert-bars/) Notification/Alert box Plugin in Post/Page
-👉 [Classic Facebook LikeBox](https://wordpress.org/plugins/hm-simple-facebook-page/) Facebook LikeBox Plugin
 
 
 == Installation ==
@@ -118,6 +123,15 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 
 
 == Changelog ==
+
+= 1.3 =
+* Settings Submenu Introduced
+* Open product details page on the same tab or a new tab option added
+* Product Category Label option added
+* Product Price Label option added
+* Display column option added
+* Grid system implemented
+* Responsive style improved
 
 = 1.2 =
 * Product pagination added
