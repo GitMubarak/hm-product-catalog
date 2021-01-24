@@ -169,7 +169,6 @@ class WPHPC_Admin
 		$wphpc_sku 				= get_post_meta($post->ID, 'wphpc_sku', true);
 		$wphpc_regular_price 	= get_post_meta($post->ID, 'wphpc_regular_price', true);
 		$wphpc_sale_price 		= get_post_meta($post->ID, 'wphpc_sale_price', true);
-		$wphpc_currency 		= get_post_meta($post->ID, 'wphpc_currency', true);
 		$wphpc_weight 			= get_post_meta($post->ID, 'wphpc_weight', true);
 		$wphpc_status 			= get_post_meta($post->ID, 'wphpc_status', true);
 ?>
@@ -187,21 +186,12 @@ class WPHPC_Admin
 					?>
         </td>
     </tr>
-    <tr class="wphpc_currency">
+    <tr class="wphpc_sku">
         <th scope="row">
             <label for="wphpc_sku"><?php esc_html_e('SKU/Product Id:', WPHPC_TXT_DOMAIN); ?></label>
         </th>
         <td>
             <input type="text" name="wphpc_sku" value="<?php echo esc_attr($wphpc_sku); ?>" class="regular-text">
-        </td>
-    </tr>
-    <tr class="wphpc_currency">
-        <th scope="row">
-            <label for="wphpc_currency"><?php esc_html_e('Currency:', WPHPC_TXT_DOMAIN); ?></label>
-        </th>
-        <td>
-            <input type="text" name="wphpc_currency" value="<?php echo esc_attr($wphpc_currency); ?>"
-                class="regular-text">
         </td>
     </tr>
     <tr class="wphpc_weight">
@@ -218,8 +208,7 @@ class WPHPC_Admin
         </th>
         <td>
             <select name="wphpc_status" class="regular-text">
-                <option value="">--Please Select--</option>
-                <option value="active" <?php if ('active' == esc_attr($wphpc_status)) echo 'selected'; ?>>Active
+                <option value="active" <?php if ('inactive' != esc_attr($wphpc_status)) echo 'selected'; ?>>Active
                 </option>
                 <option value="inactive" <?php if ('inactive' == esc_attr($wphpc_status)) echo 'selected'; ?>>Inactive
                 </option>
@@ -267,7 +256,6 @@ class WPHPC_Admin
 		$events_meta['wphpc_sku'] 				= (!empty($_POST['wphpc_sku']) && (sanitize_text_field($_POST['wphpc_sku']) != '')) ? sanitize_text_field($_POST['wphpc_sku']) : '';
 		$events_meta['wphpc_regular_price'] 	= (!empty($_POST['wphpc_regular_price']) && (sanitize_text_field($_POST['wphpc_regular_price']) != '')) ? sanitize_text_field($_POST['wphpc_regular_price']) : '';
 		$events_meta['wphpc_sale_price'] 		= (!empty($_POST['wphpc_sale_price']) && (sanitize_text_field($_POST['wphpc_sale_price']) != '')) ? sanitize_text_field($_POST['wphpc_sale_price']) : '';
-		$events_meta['wphpc_currency'] 			= (!empty($_POST['wphpc_currency']) && (sanitize_text_field($_POST['wphpc_currency']) != '')) ? sanitize_text_field($_POST['wphpc_currency']) : '';
 		$events_meta['wphpc_weight'] 			= (!empty($_POST['wphpc_weight']) && (sanitize_text_field($_POST['wphpc_weight']) != '')) ? sanitize_text_field($_POST['wphpc_weight']) : '';
 		$events_meta['wphpc_status'] 			= (!empty($_POST['wphpc_status']) && (sanitize_text_field($_POST['wphpc_status']) != '')) ? sanitize_text_field($_POST['wphpc_status']) : '';
 

@@ -1,10 +1,10 @@
 === HM Product Catalog ===
-Contributors: mhmrajib
-Donate link: https://www.paypal.me/mhmrajib/2
+Contributors: mhmrajib, hmplugin
+Donate link: https://www.paypal.me/mhmrajib
 Tags: catalog, product, product catalog, product catalogue, products
 Requires at least: 4.6
-Tested up to: 5.3.2
-Stable tag: 1.3
+Tested up to: 5.6
+Stable tag: 1.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,11 +13,12 @@ A simple plugin to display products in your Post/Page area. Use shortcode: [hm_p
 
 == Description ==
 
-[HM Product Catalog](http://www.hossnimubarak.com) is a Responsive Product catalog plugin to display Products in your Post/Page area. 
+[HM Product Catalog](https://www.hmplugin.com) is a Responsive Product catalog plugin to display Products in your Post/Page area. 
 In Product details page it display SKU, Category, Regular Price, Sale Price, Description etc.
 Display anywhere in your Page or Post by using shortcode: [hm_product_catalog].
 
 WP Products Catalog is a simple, effective and powerful plugin to showcase your desired Products.
+
 
 **🌟 Plugin Features:**
 
@@ -54,25 +55,34 @@ WP Products Catalog is a simple, effective and powerful plugin to showcase your 
 <strong> Show Products of a specific Catalog </strong>
 
 <pre> [hm_product_catalog catalog="Mobile"] </pre>
-<pre> [hm_product_catalog catalog='Mobile'] </pre>
 
 
-**📋 Feedback/Rating:**
-If you find this plugin helpful, feel free to give us your valuable review and share this plugin with friends and others. This will help us to improve this plugin.
+**👨‍💻 Demo / Support/ Live Chat:**
+[HM Product Catalog: See Demo](https://demo.hmplugin.com/hm-product-catalog/)
 
 
-**🔥 Other Plugins from [HM Plugins](http://www.hossnimubarak.com):**
+**👍 Feedback/Rating:**
+If you find this plugin helpful, feel free to give us your valuable review. Rate us and share this plugin with your friends and others. This will motivate us and help us to grow.
+[Rate Us](https://wordpress.org/support/plugin/hm-product-catalog/reviews/#new-post)
 
-👉 [Worldwide Breaking News Headlines](https://wordpress.org/plugins/worldwide-breaking-news-headlines/) Breaking News, Headlines plugin
-👉 [WP Top News](https://wordpress.org/plugins/wp-top-news/) Top News, Breaking News, Headlines Plugin
-👉 [Tiny Bar](https://wordpress.org/plugins/tiny-bar/) Display a bar at Top or Bottom
-👉 [WP Books Gallery](https://wordpress.org/plugins/wp-books-gallery/) WP Books Gallery
-👉 [HM Resume Manager](https://wordpress.org/plugins/hm-resume-manager/) A resume manager plugin
-👉 [HM Wc Product Advertiser](https://wordpress.org/plugins/hm-wc-product-advertiser/) Wocommerce Product Advertiser
-👉 [HM – Cool Author Box](https://wordpress.org/plugins/hm-cool-author-box-widget/) Author Box plugin
+
+**🔥 Other Plugins from [HM Plugin](https://www.hmplugin.com):**
+
+👉 [WP Books Gallery](https://wordpress.org/plugins/wp-books-gallery/) Books Gallery Plugin for WordPress
+👉 [Worldwide Breaking News Headlines](https://wordpress.org/plugins/worldwide-breaking-news-headlines/) Breaking News, Headlines Widget Plugin for WordPress
+👉 [WP Top News](https://wordpress.org/plugins/wp-top-news/) Top News, Breaking News, Headlines Shortcoded Plugin for WordPress
+👉 [WordPress Stripe Donation](https://wordpress.org/plugins/wp-stripe-donation/) Donations Coolection Plugin for WordPress using Stripe Payement
+👉 [Tiny Bar](https://wordpress.org/plugins/tiny-bar/) Message Bar Plugin for WordPress to display Message at Top/Bottom Bar of a web page
+👉 [HM – Cool Author Box](https://wordpress.org/plugins/hm-cool-author-box-widget/) Author Box plugin for WordPress to display author info
+👉 [HM Resume Manager](https://wordpress.org/plugins/hm-resume-manager/) A Resume/CV Manager Plugin for WordPress
+👉 [HM Product Catalog](https://wordpress.org/plugins/hm-product-catalog/) A Product Catalog Plugin for WordPress
+👉 [HM Wc Product Advertiser](https://wordpress.org/plugins/hm-wc-product-advertiser/) Product Advertiser Plugin for Wocommerce
 👉 [WP Scroll To Post](https://wordpress.org/plugins/wp-scroll-to-post/) Display random post(Single) at the bottom right corner
-👉 [HM Recent Posts Widget](https://wordpress.org/plugins/hm-recent-posts-widget/) Ticker Post plugin
-👉 [WP Alert Bars](https://wordpress.org/plugins/wp-alert-bars/) Notification/Alert box Plugin in Post/Page
+👉 [HM Recent Posts Widget](https://wordpress.org/plugins/hm-recent-posts-widget/) Ticker Post plugin for WordPress
+👉 [WP Alert Bars](https://wordpress.org/plugins/wp-alert-bars/) Notification/Alert box Plugin for WordPress
+👉 [FaceBook LikeBox](https://wordpress.org/plugins/hm-simple-facebook-page/) A FaceBook LikeBox Plugin for WordPress
+👉 [WP Display FAQ](https://wordpress.org/plugins/wp-display-faq/) FAQs manager plugin for WordPress
+👉 [HM Logo Showcase](https://wordpress.org/plugins/hm-logo-showcase/) Logo manager plugin for WordPress
 
 
 == Installation ==
@@ -123,6 +133,11 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 
 
 == Changelog ==
+
+= 1.4 =
+* Code optimized and minor bug fixed
+* Css issue fixed
+
 
 = 1.3 =
 * Settings Submenu Introduced

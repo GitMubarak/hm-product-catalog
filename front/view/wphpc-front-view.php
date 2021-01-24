@@ -40,6 +40,7 @@ wp_reset_query();
 $wphpcProducts = new WP_Query($wphpcProductsArr);
 
 $wphpcGeneralSettings = stripslashes_deep(unserialize(get_option('wphpc_general_settings')));
+$wphpcCurrency = ($wphpcGeneralSettings['wphpc_currency'] != '') ? $wphpcGeneralSettings['wphpc_currency'] : '';
 $wphpcDetailsIsSxternal = ($wphpcGeneralSettings['wphpc_details_is_external'] == 1) ? ' target="_blank"' : '';
 $wphpcCatLbl = ($wphpcGeneralSettings['wphpc_cat_label_txt'] != '') ? $wphpcGeneralSettings['wphpc_cat_label_txt'] : '';
 $wphpcPriceLbl = ($wphpcGeneralSettings['wphpc_price_label_txt'] != '') ? $wphpcGeneralSettings['wphpc_price_label_txt'] : '';
@@ -83,10 +84,7 @@ $wphpcProductColumn = ($wphpcGeneralSettings['wphpc_product_column'] != '') ? $w
         } else {
           echo '<span class="price-before">' . $wphpcRegularPrice . '</span> <span class="price-after">' . $wphpcSalePrice . '</span>';
         }
-        $wphpcCurrency = get_post_meta($post->ID, 'wphpc_currency', true);
-        if (!empty($wphpcCurrency)) {
-          echo ' ' . $wphpcCurrency;
-        }
+        echo '&nbsp;' . esc_html($wphpcCurrency);
         ?>
         </div>
 
