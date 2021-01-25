@@ -6,18 +6,13 @@ class WPHPC_Front
 {	
 	private $wphpc_version;
 
-	function __construct( $version ){
+	function __construct( $version ) {
 		$this->wphpc_version = $version;
 		$this->wphpc_assets_prefix = substr(WPHPC_PRFX, 0, -1) . '-';
 	}
 	
-	function wphpc_front_assets(){
+	function wphpc_front_assets() {
 		
-		wp_enqueue_style(	'wphpc-front-style-w3',
-							WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'w3.css',
-							array(),
-							$this->wphpc_version,
-							FALSE );
 		wp_enqueue_style(	'wphpc-front-style',
 							WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'front-style.css',
 							array(),

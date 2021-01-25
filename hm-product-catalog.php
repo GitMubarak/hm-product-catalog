@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name:	HM Product Catalog
- * Plugin URI:	http://wordpress.org/plugins/hm-product-catalog/
+ * Plugin URI:	https://wordpress.org/plugins/hm-product-catalog/
  * Description:	A simple plugin to display products in your Post/Page area. Use shortcode: [hm_product_catalog]
  * Version:		1.4
- * Author:		Hossni Mubarak
- * Author URI:	http://www.hossnimubarak.com
+ * Author:		HM Plugin
+ * Author URI:	https://hmplugin.com
  * License:		GPL-2.0+
  * License URI:	http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -17,7 +17,7 @@ define('WPHPC_PATH', plugin_dir_path(__FILE__));
 define('WPHPC_ASSETS', plugins_url('/assets/', __FILE__));
 define('WPHPC_SLUG', plugin_basename(__FILE__));
 define('WPHPC_PRFX', 'wphpc_');
-define('WPHPC_CLS_PRFX', 'cls-hm-product-catalog-');
+define('WPHPC_CLS_PRFX', 'cls-hmpc-');
 define('WPHPC_TXT_DOMAIN', 'hm-product-catalog');
 define('WPHPC_VERSION', '1.4');
 

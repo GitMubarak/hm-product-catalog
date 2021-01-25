@@ -34,9 +34,7 @@ class WPHPC_Admin
 	/**
 	 *	Loading admin panel assets
 	 */
-	function wphpc_enqueue_assets()
-	{
-
+	function wphpc_enqueue_assets() {
 		wp_enqueue_style(
 			$this->wphpc_assets_prefix . 'admin-style',
 			WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'admin-style.css',

@@ -11,16 +11,20 @@ if (isset($_POST['updateGeneralSettings'])) {
     );
     $wphpcShowGeneralMessage = update_option('wphpc_general_settings', serialize($wphpcGeneralSettingsInfo));
 }
+
 $wphpcGeneralSettings = stripslashes_deep(unserialize(get_option('wphpc_general_settings')));
-//echo "<pre>";
-//print_r($wphpcGeneralSettings);
 ?>
 <div id="wph-wrap-all" class="wrap wphpc-settings-page">
+
     <div class="settings-banner">
-        <h2><?php esc_html_e('HM Product Catalog Settings', WPHPC_TXT_DOMAIN); ?></h2>
+        <h2><?php esc_html_e('General Settings', WPHPC_TXT_DOMAIN); ?></h2>
     </div>
-    <?php if ($wphpcShowGeneralMessage) : $this->wphpc_display_notification('success', 'Your information updated successfully.');
-    endif; ?>
+
+    <?php 
+        if ( $wphpcShowGeneralMessage ) {
+            $this->wphpc_display_notification('success', 'Your information updated successfully.');
+        }
+    ?>
 
     <form name="wphpc_general_settings_form" role="form" class="form-horizontal" method="post" action=""
         id="wphpc-general-settings-form">
@@ -30,7 +34,7 @@ $wphpcGeneralSettings = stripslashes_deep(unserialize(get_option('wphpc_general_
                     <label for="wphpc_currency"><?php esc_html_e('Currency:', WPHPC_TXT_DOMAIN); ?></label>
                 </th>
                 <td>
-                    <input type="text" name="wphpc_currency" placeholder="USD" class="regular-text"
+                    <input type="text" name="wphpc_currency" placeholder="USD" class=""
                         value="<?php echo esc_attr($wphpcGeneralSettings['wphpc_currency']); ?>">
                 </td>
             </tr>
@@ -52,7 +56,7 @@ $wphpcGeneralSettings = stripslashes_deep(unserialize(get_option('wphpc_general_
                         for="wphpc_cat_label_txt"><?php esc_html_e('Category Label Text:', WPHPC_TXT_DOMAIN); ?></label>
                 </th>
                 <td>
-                    <input type="text" name="wphpc_cat_label_txt" placeholder="Category:" class="regular-text"
+                    <input type="text" name="wphpc_cat_label_txt" placeholder="Category:" class=""
                         value="<?php echo esc_attr($wphpcGeneralSettings['wphpc_cat_label_txt']); ?>">
                 </td>
             </tr>
@@ -62,7 +66,7 @@ $wphpcGeneralSettings = stripslashes_deep(unserialize(get_option('wphpc_general_
                         for="wphpc_price_label_txt"><?php esc_html_e('Price Label Text:', WPHPC_TXT_DOMAIN); ?></label>
                 </th>
                 <td>
-                    <input type="text" name="wphpc_price_label_txt" placeholder="Price:" class="regular-text"
+                    <input type="text" name="wphpc_price_label_txt" placeholder="Price:" class=""
                         value="<?php echo esc_attr($wphpcGeneralSettings['wphpc_price_label_txt']); ?>">
                 </td>
             </tr>
@@ -72,7 +76,7 @@ $wphpcGeneralSettings = stripslashes_deep(unserialize(get_option('wphpc_general_
                         for="wphpc_product_column"><?php esc_html_e('Products Columns:', WPHPC_TXT_DOMAIN); ?></label>
                 </th>
                 <td>
-                    <select name="wphpc_product_column" class="regular-text">
+                    <select name="wphpc_product_column" class="">
                         <option value=""><?php esc_html_e('--Select One--', WPHPC_TXT_DOMAIN); ?></option>
                         <option value="2"
                             <?php if ('2' == esc_attr($wphpcGeneralSettings['wphpc_product_column'])) echo 'selected'; ?>>
@@ -91,6 +95,6 @@ $wphpcGeneralSettings = stripslashes_deep(unserialize(get_option('wphpc_general_
             </tr>
         </table>
         <p class="submit"><button id="updateGeneralSettings" name="updateGeneralSettings"
-                class="button button-primary"><?php esc_attr_e('Update Settings', WPHPC_TXT_DOMAIN); ?></button></p>
+                class="button button-primary"><?php esc_attr_e('Save Settings', WPHPC_TXT_DOMAIN); ?></button></p>
     </form>
 </div>
