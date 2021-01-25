@@ -1,10 +1,10 @@
 <?php
+if ( ! defined('ABSPATH') ) exit;
 
 /**
  *	Admin Parent Class
  */
-class WPHPC_Admin
-{
+class WPHPC_Admin {
 	private $wphpc_version;
 	private $wphpc_assets_prefix;
 
@@ -18,16 +18,26 @@ class WPHPC_Admin
 	/**
 	 *	Loading admin menu
 	 */
-	function wphpc_admin_menu()
-	{
+	function wphpc_admin_menu() {
+		
 		$wphpc_cpt_menu = 'edit.php?post_type=products';
+		
 		add_submenu_page(
 			$wphpc_cpt_menu,
-			esc_html__('Settings', WPHPC_TXT_DOMAIN),
-			esc_html__('Settings', WPHPC_TXT_DOMAIN),
+			__( 'General Settings', WPHPC_TXT_DOMAIN ),
+			__( 'General Settings', WPHPC_TXT_DOMAIN ),
 			'manage_options',
 			'wphpc-settings-section',
-			array($this, WPHPC_PRFX . 'settings')
+			array( $this, WPHPC_PRFX . 'settings' )
+		);
+
+		add_submenu_page(
+			$wphpc_cpt_menu,
+			__('Help & Usage', WPHPC_TXT_DOMAIN),
+			__('Help & Usage', WPHPC_TXT_DOMAIN),
+			'manage_options',
+			'wphpc-get-help',
+			array( $this, WPHPC_PRFX . 'get_help' )
 		);
 	}
 
@@ -56,8 +66,7 @@ class WPHPC_Admin
 		);
 	}
 
-	function wphpc_custom_post_type()
-	{
+	function wphpc_custom_post_type() {
 		$labels = array(
 			'name'                => __('Products'),
 			'singular_name'       => __('Product'),
@@ -96,8 +105,7 @@ class WPHPC_Admin
 		register_post_type('products', $args);
 	}
 
-	function wphpc_taxonomy_for_products()
-	{
+	function wphpc_taxonomy_for_products() {
 
 		$labelsCatalog = array(
 			'name' => _x('Product Catalogs', 'taxonomy general name'),
@@ -146,8 +154,7 @@ class WPHPC_Admin
 		));
 	}
 
-	function wphpc_product_details_metaboxes()
-	{
+	function wphpc_product_details_metaboxes() {
 		add_meta_box(
 			'wphpc_product_details_link',
 			'Product Details',
@@ -158,8 +165,7 @@ class WPHPC_Admin
 		);
 	}
 
-	function wphpc_product_details_content()
-	{
+	function wphpc_product_details_content() {
 		global $post;
 		// Nonce field to validate form request came from current site
 		wp_nonce_field(basename(__FILE__), 'event_fields');
@@ -238,8 +244,8 @@ class WPHPC_Admin
 	/**
 	 * Save the metabox data
 	 */
-	function wphpc_save_product_meta($post_id)
-	{
+	function wphpc_save_product_meta($post_id) {
+
 		global $post;
 
 		if (!current_user_can('edit_post', $post_id)) {
@@ -278,13 +284,53 @@ class WPHPC_Admin
 		require_once WPHPC_PATH . 'admin/view/' . $this->wphpc_assets_prefix . 'admin-settings.php';
 	}
 
-	function wphpc_display_notification($type, $msg)
-	{ ?>
-<div class="wphpc-alert <?php printf('%s', $type); ?>">
-    <span class="wphpc-closebtn">&times;</span>
-    <strong><?php esc_html_e(ucfirst($type), WPHPC_TXT_DOMAIN); ?>!</strong>
-    <?php esc_html_e($msg, WPHPC_TXT_DOMAIN); ?>
-</div>
-<?php }
+	function wphpc_display_notification( $type, $msg ) { 
+		?>
+		<div class="wphpc-alert <?php printf('%s', $type); ?>">
+			<span class="wphpc-closebtn">&times;</span>
+			<strong><?php esc_html_e(ucfirst($type), WPHPC_TXT_DOMAIN); ?>!</strong>
+			<?php esc_html_e($msg, WPHPC_TXT_DOMAIN); ?>
+		</div>
+		<?php
+	}
+
+	function wphpc_get_help() {
+		require_once WPHPC_PATH . 'admin/view/wphpc-help-usage.php';
+	}
+
+	function wphpc_admin_sidebar() {
+		?>
+		<div class="hmpc-admin-sidebar" style="width: 277px; float: left; margin-top: 5px;">
+			<div class="postbox">
+				<h3 class="hndle"><span>Support / Bug / Customization</span></h3>
+				<div class="inside centered">
+					<p>Please feel free to let us know if you have any bugs to report. Your report / suggestion can make the plugin awesome!</p>
+					<p style="margin-bottom: 1px! important;"><a href="http://hossnimubarak.com/#hossnimubarak-contact" target="_blank" class="button button-primary">Get Support</a></p>
+				</div>
+			</div>
+			<div class="postbox">
+				<h3 class="hndle"><span>Buy us a coffee</span></h3>
+				<div class="inside centered">
+					<p>If you like the plugin, would you like to support the advancement of this plugin?</p>
+					<p style="margin-bottom: 1px! important;"><a href='https://www.paypal.me/mhmrajib' class="button button-primary" target="_blank">Donate</a></p>
+				</div>
+			</div>
+
+			<div class="postbox">
+				<h3 class="hndle"><span>Join HM Plugin on facebook</span></h3>
+				<div class="inside centered">
+					<iframe src="//www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/hmplugin&amp;width&amp;height=258&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:220px;" allowTransparency="true"></iframe>
+				</div>
+			</div>
+
+			<div class="postbox">
+				<h3 class="hndle"><span>Follow HM Plugin on twitter</span></h3>
+				<div class="inside centered">
+					<a href="https://twitter.com/hmplugin" target="_blank" class="button button-secondary">Follow @hmplugin<span class="dashicons dashicons-twitter" style="position: relative; top: 3px; margin-left: 3px; color: #0fb9da;"></span></a>
+				</div>
+			</div>
+		</div> 
+		<?php
+	}
 }
 ?>
