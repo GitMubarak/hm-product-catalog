@@ -1,9 +1,10 @@
 <?php
+if ( ! defined('ABSPATH') ) exit;
+
 /**
 *	Front Parent Class
 */
-class WPHPC_Front 
-{	
+class WPHPC_Front {
 	private $wphpc_version;
 
 	function __construct( $version ) {
@@ -18,9 +19,11 @@ class WPHPC_Front
 							array(),
 							$this->wphpc_version,
 							FALSE );
-		if ( !wp_script_is( 'jquery' ) ) {
+
+		if ( ! wp_script_is( 'jquery' ) ) {
 			wp_enqueue_script('jquery');
 		}
+
 		wp_enqueue_script(  'wphpc-front-script',
 							WPHPC_ASSETS . 'js/wphpc-front-script.js',
 							array('jquery'),
@@ -28,19 +31,26 @@ class WPHPC_Front
 							TRUE );
 	}
 
-	function wphpc_load_shortcode(){
+	function wphpc_load_shortcode() {
 		add_shortcode( 'hm_product_catalog', array( $this, 'wphpc_load_shortcode_view' ) );
 	}
 	
-	function wphpc_load_shortcode_view($attr){
+	function wphpc_load_shortcode_view( $attr ) {
+		
+		// Assign all shortcode params
+		$wphpcCatelog 		= isset( $attr['catalog']) ? $attr['catalog'] : '';
+		$wphpcDisplay		= isset( $attr['display']) ? $attr['display'] : '';
+		$wphpcPagination	= isset( $attr['pagination']) ? $attr['pagination'] : false;
+
 		$output = '';
 		ob_start();
-		include WPHPC_PATH . 'front/view/' . $this->wphpc_assets_prefix . 'front-view.php';
+		include WPHPC_PATH . 'front/view/wphpc-front-view.php';
 		$output .= ob_get_clean();
 		return $output;
 	}
 
-	function wphpc_load_single_template($template){
+	function wphpc_load_single_template( $template ) {
+
 		global $post;
 		
 		if ( 'products' === $post->post_type && locate_template( array( 'wphpc-single-product.php' ) ) !== $template ) {

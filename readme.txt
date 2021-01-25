@@ -135,6 +135,8 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 == Changelog ==
 
 = 1.4 =
+* Column params added to shortcode
+* elementor edit page the_content issue fixed
 * w3.css removed from front end
 * Code optimized and minor bug fixed
 * Css issue fixed
