@@ -1,4 +1,5 @@
 <?php
+if ( ! defined('ABSPATH') ) exit;
 /**
  * Our main plugin class
 */
@@ -10,21 +11,21 @@ class WPHPC_Master {
 	/**
 	 * Class Constructor
 	*/
-	function __construct(){
+	function __construct() {
 		$this->wphpc_version = WPHPC_VERSION;
 		$this->wphpc_load_dependencies();
 		$this->wphpc_trigger_admin_hooks();
 		$this->wphpc_trigger_front_hooks();
 	}
 
-	private function wphpc_load_dependencies(){
+	private function wphpc_load_dependencies() {
 		require_once WPHPC_PATH . 'admin/' . WPHPC_CLS_PRFX . 'admin.php';
 		require_once WPHPC_PATH . 'front/' . WPHPC_CLS_PRFX . 'front.php';
 		require_once WPHPC_PATH . 'inc/' . WPHPC_CLS_PRFX . 'loader.php';
 		$this->wphpc_loader = new WPHPC_Loader();
 	}
 
-	private function wphpc_trigger_admin_hooks(){
+	private function wphpc_trigger_admin_hooks() {
 		$wphpc_admin = new WPHPC_Admin($this->wphpc_version());
 		$this->wphpc_loader->add_action( 'admin_enqueue_scripts', $wphpc_admin, WPHPC_PRFX . 'enqueue_assets' );
 		$this->wphpc_loader->add_action( 'init', $wphpc_admin, WPHPC_PRFX . 'custom_post_type', 0 );
@@ -32,38 +33,22 @@ class WPHPC_Master {
 		$this->wphpc_loader->add_action( 'add_meta_boxes', $wphpc_admin, WPHPC_PRFX . 'product_details_metaboxes' );
 		$this->wphpc_loader->add_action( 'save_post', $wphpc_admin, WPHPC_PRFX . 'save_product_meta', 1, 1 );
 		$this->wphpc_loader->add_action( 'admin_menu', $wphpc_admin, WPHPC_PRFX . 'admin_menu', 0 );
+		//$this->wphpc_loader->add_filter( 'plugin_row_meta', $wphpc_admin, 'wphpc_donation_link_to_plugin_active', 10, 2 );
 	}
 
-	function wphpc_trigger_front_hooks(){
+	function wphpc_trigger_front_hooks() {
 		$wphpc_front = new WPHPC_Front($this->wphpc_version());
 		$this->wphpc_loader->add_action( 'wp_enqueue_scripts', $wphpc_front, WPHPC_PRFX . 'front_assets' );
 		$this->wphpc_loader->add_filter( 'single_template', $wphpc_front, WPHPC_PRFX . 'load_single_template', 99 );
 		$wphpc_front->wphpc_load_shortcode();
 	}
 
-	function wphpc_run(){
+	function wphpc_run() {
 		$this->wphpc_loader->wphpc_run();
 	}
 
 	function wphpc_version(){
 		return $this->wphpc_version;
-	}
-
-	function wphpc_unregister_settings(){
-		global $wpdb;
-	
-		$tbl = $wpdb->prefix . 'options';
-		$search_string = WPHPC_PRFX . '%';
-		
-		$sql = $wpdb->prepare( "SELECT option_name FROM $tbl WHERE option_name LIKE %s", $search_string );
-		$options = $wpdb->get_results( $sql , OBJECT );
-	
-		if(is_array($options) && count($options)) {
-			foreach( $options as $option ) {
-				delete_option( $option->option_name );
-				delete_site_option( $option->option_name );
-			}
-		}
 	}
 }
 ?>
