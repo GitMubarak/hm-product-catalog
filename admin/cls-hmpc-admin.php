@@ -5,11 +5,13 @@ if ( ! defined('ABSPATH') ) exit;
  *	Admin Parent Class
  */
 class WPHPC_Admin {
+
+	use WPHPC_Currency;
+
 	private $wphpc_version;
 	private $wphpc_assets_prefix;
 
-	function __construct($version)
-	{
+	function __construct( $version ) {
 		$this->wphpc_version = $version;
 		$this->wphpc_assets_prefix = substr(WPHPC_PRFX, 0, -1) . '-';
 	}
@@ -19,22 +21,30 @@ class WPHPC_Admin {
 	 *	Loading admin menu
 	 */
 	function wphpc_admin_menu() {
-		
-		$wphpc_cpt_menu = 'edit.php?post_type=products';
-		
+
+		add_menu_page(
+			__( 'HM Product Catalog', WPSD_TXT_DOMAIN ),
+			__( 'HM Product Catalog', WPSD_TXT_DOMAIN ),
+			'',
+			'wphpc-admin-settings',
+			'',
+			WPHPC_ASSETS . 'img/hmplugin-icon.png',
+			25
+		);
+
 		add_submenu_page(
-			$wphpc_cpt_menu,
-			__( 'General Settings', WPHPC_TXT_DOMAIN ),
-			__( 'General Settings', WPHPC_TXT_DOMAIN ),
+			'wphpc-admin-settings',
+			__( 'General Settings', WPSD_TXT_DOMAIN ),
+			__( 'General Settings', WPSD_TXT_DOMAIN ),
 			'manage_options',
 			'wphpc-settings-section',
 			array( $this, WPHPC_PRFX . 'settings' )
 		);
 
 		add_submenu_page(
-			$wphpc_cpt_menu,
-			__('Help & Usage', WPHPC_TXT_DOMAIN),
-			__('Help & Usage', WPHPC_TXT_DOMAIN),
+			'wphpc-admin-settings',
+			__( 'Help & Usage', WPHPC_TXT_DOMAIN ),
+			__( 'Help & Usage', WPHPC_TXT_DOMAIN ),
 			'manage_options',
 			'wphpc-get-help',
 			array( $this, WPHPC_PRFX . 'get_help' )
@@ -45,6 +55,7 @@ class WPHPC_Admin {
 	 *	Loading admin panel assets
 	 */
 	function wphpc_enqueue_assets() {
+
 		wp_enqueue_style(
 			$this->wphpc_assets_prefix . 'admin-style',
 			WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'admin-style.css',
@@ -53,7 +64,7 @@ class WPHPC_Admin {
 			FALSE
 		);
 
-		if (!wp_script_is('jquery')) {
+		if ( ! wp_script_is('jquery') ) {
 			wp_enqueue_script('jquery');
 		}
 
@@ -67,10 +78,11 @@ class WPHPC_Admin {
 	}
 
 	function wphpc_custom_post_type() {
+
 		$labels = array(
 			'name'                => __('Products'),
 			'singular_name'       => __('Product'),
-			'menu_name'           => __('HM Product Catalog'),
+			'menu_name'           => __('Products'),
 			'parent_item_colon'   => __('Parent Product'),
 			'all_items'           => __('All Products'),
 			'view_item'           => __('View Product'),
@@ -82,6 +94,7 @@ class WPHPC_Admin {
 			'not_found'           => __('Not Found'),
 			'not_found_in_trash'  => __('Not found in Trash')
 		);
+
 		$args = array(
 			'label'               => __('products'),
 			'description'         => __('Description For Products'),
@@ -100,8 +113,9 @@ class WPHPC_Admin {
 			'taxonomies' 	      => array('post_tag'),
 			'publicly_queryable'  => true,
 			'capability_type'     => 'page',
-			'menu_icon'           => 'dashicons-screenoptions'
+			'menu_icon'           => 'dashicons-products'
 		);
+
 		register_post_type('products', $args);
 	}
 
@@ -157,8 +171,17 @@ class WPHPC_Admin {
 	function wphpc_product_details_metaboxes() {
 		add_meta_box(
 			'wphpc_product_details_link',
-			'Product Details',
+			__( 'Product Details', WPHPC_TXT_DOMAIN ),
 			array($this, WPHPC_PRFX . 'product_details_content'),
+			'products',
+			'normal',
+			'high'
+		);
+
+		add_meta_box(
+			'wphpc-product-short-description',
+			__( 'Product Short Description', WPHPC_TXT_DOMAIN ),
+			array( $this, 'wphpc_product_short_description'),
 			'products',
 			'normal',
 			'high'
@@ -166,93 +189,46 @@ class WPHPC_Admin {
 	}
 
 	function wphpc_product_details_content() {
+
 		global $post;
-		// Nonce field to validate form request came from current site
-		wp_nonce_field(basename(__FILE__), 'event_fields');
-		$wphpc_short_description	= get_post_meta($post->ID, 'wphpc_short_description', true);
-		$wphpc_sku 				= get_post_meta($post->ID, 'wphpc_sku', true);
-		$wphpc_regular_price 	= get_post_meta($post->ID, 'wphpc_regular_price', true);
-		$wphpc_sale_price 		= get_post_meta($post->ID, 'wphpc_sale_price', true);
-		$wphpc_weight 			= get_post_meta($post->ID, 'wphpc_weight', true);
-		$wphpc_status 			= get_post_meta($post->ID, 'wphpc_status', true);
-?>
-<table class="form-table">
-    <tr class="wphpc_short_description">
-        <th scope="row">
-            <label for="wphpc_short_description"><?php esc_html_e('Short Description:', WPHPC_TXT_DOMAIN); ?></label>
-        </th>
-        <td>
-            <?php
-					$settings = array('media_buttons' => false, 'editor_height' => 200,);
-					$content = wp_kses_post($wphpc_short_description);
-					$editor_id = 'wphpc_short_description';
-					wp_editor($content, $editor_id, $settings);
-					?>
-        </td>
-    </tr>
-    <tr class="wphpc_sku">
-        <th scope="row">
-            <label for="wphpc_sku"><?php esc_html_e('SKU/Product Id:', WPHPC_TXT_DOMAIN); ?></label>
-        </th>
-        <td>
-            <input type="text" name="wphpc_sku" value="<?php echo esc_attr($wphpc_sku); ?>" class="regular-text">
-        </td>
-    </tr>
-    <tr class="wphpc_weight">
-        <th scope="row">
-            <label for="wphpc_weight"><?php esc_html_e('Weight:', WPHPC_TXT_DOMAIN); ?></label>
-        </th>
-        <td>
-            <input type="text" name="wphpc_weight" value="<?php echo esc_attr($wphpc_weight); ?>" class="regular-text">
-        </td>
-    </tr>
-    <tr class="wphpc_status">
-        <th scope="row">
-            <label for="wphpc_status"><?php esc_html_e('Status:', WPHPC_TXT_DOMAIN); ?></label>
-        </th>
-        <td>
-            <select name="wphpc_status" class="regular-text">
-                <option value="active" <?php if ('inactive' != esc_attr($wphpc_status)) echo 'selected'; ?>>Active
-                </option>
-                <option value="inactive" <?php if ('inactive' == esc_attr($wphpc_status)) echo 'selected'; ?>>Inactive
-                </option>
-            </select>
-        </td>
-    </tr>
-    <tr class="wphpc_regular_price">
-        <th scope="row">
-            <label for="wphpc_regular_price"><?php esc_html_e('Regular Price:', WPHPC_TXT_DOMAIN); ?></label>
-        </th>
-        <td>
-            <input type="text" name="wphpc_regular_price" value="<?php echo esc_attr($wphpc_regular_price); ?>"
-                class="regular-text">
-        </td>
-    </tr>
-    <tr class="wphpc_sale_price">
-        <th scope="row">
-            <label for="wphpc_sale_price"><?php esc_html_e('Sale Price:', WPHPC_TXT_DOMAIN); ?></label>
-        </th>
-        <td>
-            <input type="text" name="wphpc_sale_price" value="<?php echo esc_attr($wphpc_sale_price); ?>"
-                class="regular-text">
-        </td>
-    </tr>
-</table>
-<?php
+
+		wp_nonce_field( basename(__FILE__), 'event_fields' );
+		
+		$wphpc_sku 					= get_post_meta( $post->ID, 'wphpc_sku', true );
+		$wphpc_regular_price 		= get_post_meta( $post->ID, 'wphpc_regular_price', true );
+		$wphpc_sale_price 			= get_post_meta( $post->ID, 'wphpc_sale_price', true );
+		$wphpc_weight 				= get_post_meta( $post->ID, 'wphpc_weight', true );
+		$wphpc_status 				= get_post_meta( $post->ID, 'wphpc_status', true );
+		$wphpc_stock_status 		= get_post_meta( $post->ID, 'wphpc_stock_status', true );
+		$wphpc_product_type 		= get_post_meta( $post->ID, 'wphpc_product_type', true );
+		$wphpc_product_url 			= get_post_meta( $post->ID, 'wphpc_product_url', true );
+
+		require_once 'view/partial/product-details.php';
+	}
+
+	function wphpc_product_short_description() {
+		
+		global $post;
+		
+		$wphpc_short_description	= get_post_meta( $post->ID, 'wphpc_short_description', true );
+		$settings 					= array('media_buttons' => true, 'editor_height' => 200,);
+		$content 					= wp_kses_post($wphpc_short_description);
+		$editor_id 					= 'wphpc_short_description';
+		wp_editor( $content, $editor_id, $settings );
 	}
 
 	/**
 	 * Save the metabox data
 	 */
-	function wphpc_save_product_meta($post_id) {
+	function wphpc_save_product_meta( $post_id ) {
 
 		global $post;
 
-		if (!current_user_can('edit_post', $post_id)) {
+		if ( ! current_user_can('edit_post', $post_id) ) {
 			return $post_id;
 		}
 
-		if (!isset($_POST['wphpc_regular_price']) || !wp_verify_nonce($_POST['event_fields'], basename(__FILE__))) {
+		if ( ! isset( $_POST['wphpc_regular_price']) || ! wp_verify_nonce( $_POST['event_fields'], basename(__FILE__) ) ) {
 			return $post_id;
 		}
 
@@ -262,26 +238,32 @@ class WPHPC_Admin {
 		$events_meta['wphpc_sale_price'] 		= (!empty($_POST['wphpc_sale_price']) && (sanitize_text_field($_POST['wphpc_sale_price']) != '')) ? sanitize_text_field($_POST['wphpc_sale_price']) : '';
 		$events_meta['wphpc_weight'] 			= (!empty($_POST['wphpc_weight']) && (sanitize_text_field($_POST['wphpc_weight']) != '')) ? sanitize_text_field($_POST['wphpc_weight']) : '';
 		$events_meta['wphpc_status'] 			= (!empty($_POST['wphpc_status']) && (sanitize_text_field($_POST['wphpc_status']) != '')) ? sanitize_text_field($_POST['wphpc_status']) : '';
+		$events_meta['wphpc_stock_status'] 		= isset( $_POST['wphpc_stock_status'] ) && filter_var( $_POST['wphpc_stock_status'], FILTER_SANITIZE_STRING ) ? $_POST['wphpc_stock_status'] : '';
+		$events_meta['wphpc_product_type'] 		= isset( $_POST['wphpc_product_type'] ) && filter_var( $_POST['wphpc_product_type'], FILTER_SANITIZE_STRING ) ? $_POST['wphpc_product_type'] : '';
+		$events_meta['wphpc_product_url'] 		= isset( $_POST['wphpc_product_url'] ) ? sanitize_text_field($_POST['wphpc_product_url']) : '';
 
 
-		foreach ($events_meta as $key => $value) :
-			if ('revision' === $post->post_type) {
+		foreach ( $events_meta as $key => $value ) {
+			if ( 'revision' === $post->post_type ) {
 				return;
 			}
-			if (get_post_meta($post_id, $key, false)) {
-				update_post_meta($post_id, $key, $value);
+			if ( get_post_meta( $post_id, $key, false ) ) {
+				update_post_meta( $post_id, $key, $value );
 			} else {
-				add_post_meta($post_id, $key, $value);
+				add_post_meta($post_id, $key, $value );
 			}
-			if (!$value) {
-				delete_post_meta($post_id, $key);
+			if ( ! $value ) {
+				delete_post_meta( $post_id, $key );
 			}
-		endforeach;
+		}
 	}
 
-	function wphpc_settings()
-	{
+	function wphpc_settings() {
 		require_once WPHPC_PATH . 'admin/view/' . $this->wphpc_assets_prefix . 'admin-settings.php';
+	}
+
+	function wphpc_get_help() {
+		require_once WPHPC_PATH . 'admin/view/wphpc-help-usage.php';
 	}
 
 	function wphpc_display_notification( $type, $msg ) { 
@@ -291,45 +273,6 @@ class WPHPC_Admin {
 			<strong><?php esc_html_e(ucfirst($type), WPHPC_TXT_DOMAIN); ?>!</strong>
 			<?php esc_html_e($msg, WPHPC_TXT_DOMAIN); ?>
 		</div>
-		<?php
-	}
-
-	function wphpc_get_help() {
-		require_once WPHPC_PATH . 'admin/view/wphpc-help-usage.php';
-	}
-
-	function wphpc_admin_sidebar() {
-		?>
-		<div class="hmpc-admin-sidebar" style="width: 277px; float: left; margin-top: 5px;">
-			<div class="postbox">
-				<h3 class="hndle"><span>Support / Bug / Customization</span></h3>
-				<div class="inside centered">
-					<p>Please feel free to let us know if you have any bugs to report. Your report / suggestion can make the plugin awesome!</p>
-					<p style="margin-bottom: 1px! important;"><a href="http://hossnimubarak.com/#hossnimubarak-contact" target="_blank" class="button button-primary">Get Support</a></p>
-				</div>
-			</div>
-			<div class="postbox">
-				<h3 class="hndle"><span>Buy us a coffee</span></h3>
-				<div class="inside centered">
-					<p>If you like the plugin, would you like to support the advancement of this plugin?</p>
-					<p style="margin-bottom: 1px! important;"><a href='https://www.paypal.me/mhmrajib' class="button button-primary" target="_blank">Donate</a></p>
-				</div>
-			</div>
-
-			<div class="postbox">
-				<h3 class="hndle"><span>Join HM Plugin on facebook</span></h3>
-				<div class="inside centered">
-					<iframe src="//www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/hmplugin&amp;width&amp;height=258&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:220px;" allowTransparency="true"></iframe>
-				</div>
-			</div>
-
-			<div class="postbox">
-				<h3 class="hndle"><span>Follow HM Plugin on twitter</span></h3>
-				<div class="inside centered">
-					<a href="https://twitter.com/hmplugin" target="_blank" class="button button-secondary">Follow @hmplugin<span class="dashicons dashicons-twitter" style="position: relative; top: 3px; margin-left: 3px; color: #0fb9da;"></span></a>
-				</div>
-			</div>
-		</div> 
 		<?php
 	}
 }

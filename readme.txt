@@ -134,6 +134,22 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 
 == Changelog ==
 
+= 1.5 =
+* Soting with various option added
+* Showing 1-X of X Results included
+* External button included to product details page
+* Product type simple/external affiliat option added
+* Product external url option added
+* Styling improved
+* Pagination styling changed
+* 115 Currency added
+* In stock/Out of stock option added added
+* SKU and Stock column added to admin product list
+* Product status dropdown to radio button in admin panel
+* Admin menu rearranged
+* Code optimized
+* Css issue fixed
+
 = 1.4 =
 * Column params added to shortcode
 * elementor edit page the_content issue fixed

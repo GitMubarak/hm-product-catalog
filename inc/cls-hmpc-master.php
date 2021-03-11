@@ -19,6 +19,7 @@ class WPHPC_Master {
 	}
 
 	private function wphpc_load_dependencies() {
+		require_once 'cls-hmpc-currency.php';
 		require_once WPHPC_PATH . 'admin/' . WPHPC_CLS_PRFX . 'admin.php';
 		require_once WPHPC_PATH . 'front/' . WPHPC_CLS_PRFX . 'front.php';
 		require_once WPHPC_PATH . 'inc/' . WPHPC_CLS_PRFX . 'loader.php';

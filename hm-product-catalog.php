@@ -36,3 +36,33 @@ function wphpc_donation_link_to_plugin_active( $links, $file ) {
   return (array) $links;
 }
 add_filter( 'plugin_row_meta', 'wphpc_donation_link_to_plugin_active', 10, 2 );
+
+// Add Columns To Custom Post Types
+function wphpc_add_products_columns( $columns ) {
+  $columns['sku']    = 'SKU';
+  $columns['stock'] = 'Stock';
+  return $columns;
+}
+add_filter('manage_products_posts_columns' , 'wphpc_add_products_columns');
+
+// Add Data To Custom Post Type Columns
+function wphpc_products_column_data( $column, $post_id ) {
+  switch ( $column ) {
+    case 'sku':
+      echo get_post_meta( $post_id , 'wphpc_sku' , true );
+      break;
+    case 'stock':
+      echo ( 'in' !== get_post_meta( $post_id , 'wphpc_stock_status' , true ) ) ? '<b style="color:red;">Out of stock</b>' : '<b style="color:green;">In stock</b>';
+      break;
+  }
+}
+add_action( 'manage_products_posts_custom_column' , 'wphpc_products_column_data', 10, 2 );
+
+
+// Sorting Column
+function wphpc_prducts_table_sorting( $columns ) {
+  $columns['sku'] = 'sku';
+  $columns['stock'] = 'stock';
+  return $columns;
+}
+add_filter( 'manage_edit-products_sortable_columns', 'wphpc_prducts_table_sorting' );

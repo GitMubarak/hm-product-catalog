@@ -5,6 +5,9 @@ if ( ! defined('ABSPATH') ) exit;
 *	Front Parent Class
 */
 class WPHPC_Front {
+
+	use WPHPC_Currency;
+
 	private $wphpc_version;
 
 	function __construct( $version ) {
@@ -14,6 +17,11 @@ class WPHPC_Front {
 	
 	function wphpc_front_assets() {
 		
+		wp_enqueue_style(	'wphpc-jquery-ui',
+							WPHPC_ASSETS . 'css/jquery-ui.css',
+							array(),
+							$this->wphpc_version,
+							FALSE );
 		wp_enqueue_style(	'wphpc-front-style',
 							WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'front-style.css',
 							array(),
@@ -23,6 +31,12 @@ class WPHPC_Front {
 		if ( ! wp_script_is( 'jquery' ) ) {
 			wp_enqueue_script('jquery');
 		}
+		
+		wp_enqueue_script(  'wphpc-jquery-ui',
+							WPHPC_ASSETS . 'js/jquery-ui.js',
+							array('jquery'),
+							$this->wphpc_version,
+							TRUE );
 
 		wp_enqueue_script(  'wphpc-front-script',
 							WPHPC_ASSETS . 'js/wphpc-front-script.js',
@@ -54,10 +68,26 @@ class WPHPC_Front {
 		global $post;
 		
 		if ( 'products' === $post->post_type && locate_template( array( 'wphpc-single-product.php' ) ) !== $template ) {
-			return WPHPC_PATH . 'front/view/' . $this->wphpc_assets_prefix . 'single-product.php';
+			return WPHPC_PATH . 'front/view/wphpc-single-product.php';
 		}
 
 		return $template;
+	}
+
+	function get_currency_symbol( $currency ) {
+
+		$wphpcCurrency = $this->hm_get_all_currency();
+		$symbol = '';
+
+		foreach ( $wphpcCurrency as $wpsdcurr ) {
+			
+			if ( $currency === $wpsdcurr->currency ) {
+				$symbol = $wpsdcurr->symbol;
+			}
+
+		}
+
+		return $symbol;
 	}
 }
 ?>

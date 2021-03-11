@@ -1,41 +1,161 @@
+/*  Page number and Sorting  */
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.item-sorting {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.item-sorting .result-column {
+    position: relative;
+    display: block;
+    color: #777777;
+    top: 12px;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.select-box .ui-state-default {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e5e5 !important;
+    color: #777777;
+    font-size: 14px;
+    font-weight: 400;
+    height: 50px;
+    outline: medium none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 210px !important;
+}
+
+.select-box .ui-selectmenu-button span.ui-icon::before {
+    color: #222222;
+    content: "\003e";
+    font-weight: 700;
+    font-size: 15px;
+    overflow: visible;
+    position: absolute;
+    right: 21px;
+    top: 12px;
+}
+
+.select-box .ui-selectmenu-button span.ui-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 60px;
+    height: 48px;
+    text-indent: 0;
+    margin: 0;
+}
+
+.select-box .ui-selectmenu-button span.ui-selectmenu-text {
+    display: block;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 19px;
+    text-align: left;
+    margin-right: 0px;
+    text-overflow: ellipsis;
+}
+
+.ui-selectmenu-open {
+    transform: scaleY(1);
+}
+
+.ui-selectmenu-open .ui-widget-content {
+    border: none;
+    background: #ffffff;
+    color: #222222;
+    border-radius: 0;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.10);
+}
+
+.ui-selectmenu-open .ui-menu .ui-menu-item {
+    border-bottom: 1px solid #efebea;
+    position: relative;
+    margin: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: none;
+    transition: all 500ms ease;
+}
+
+.ui-selectmenu-open .ui-widget-content .ui-state-focus {
+    background: #ff7162;
+    color: #fff;
+    border: none;
+}
+
+
+/*  Page number and Sorting Ended  */
+
 .wphpc-main-wrapper {
-    border: 1 px solid #000;
+    border: 0px solid #CCC;
     display: grid;
     grid-gap: 20px;
-    padding: 10px;
 }
 
 .wphpc-main-wrapper .wphpc-item {
-    border: 1px solid #DDD;
-    padding: 5px;
-    min-height: 300px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    min-height: 100px;
     transition: box-shadow 0.3s ease-in-out;
     text-align: center;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 15px 33px 15px;
 }
 
 .wphpc-main-wrapper .wphpc-item:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.wphpc-main-wrapper .wphpc-item img {
-    border: 0px solid #FF0000;
+.wphpc-main-wrapper .wphpc-item .wphpc-image-box {
     height: 150px;
+    width: 100%;
+    display: block;
+    margin-bottom: 51px;
+}
+
+.wphpc-main-wrapper .wphpc-item .wphpc-image-box img {
+    border: 0px solid #FF0000;
+    height: 100%;
     width: auto;
 }
 
-.wphpc-main-wrapper .wphpc-item a {
+.wphpc-main-wrapper .wphpc-item a.wphpc-product-title-link {
     border: 0px solid #000;
-    font-size: 16px;
-    font-weight: 400;
     display: inline-block;
     width: 100%;
     outline: none;
-    line-height: 24px;
-    color: #242424;
-    margin-top: 10px;
+    display: block;
+    font-size: 18px;
+    line-height: 28px;
+    color: #2b3c6b;
+    font-weight: 700;
+    margin-bottom: 0px;
 }
 
 .wphpc-main-wrapper .wphpc-item a:hover {
@@ -63,27 +183,76 @@
     line-height: 24px;
 }
 
-.wphpc-main-wrapper .wphpc-item .regular-price span {
-    font-size: 16px;
+.regular-price span.wphpc-price {
     display: inline;
     border: 0px solid #000;
     width: 100%;
     margin: 0px!important;
     padding: 0px!important;
+    color: #ff7162;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
 }
 
-.wphpc-main-wrapper .wphpc-item .regular-price span.price-before {
-    color: #CC0000;
+.regular-price span.wphpc-price.single {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.regular-price span.price-before {
+    color: #ff7162;
     text-decoration: line-through;
     font-style: italic;
 }
 
-.wphpc-main-wrapper .wphpc-item .regular-price span.price-after {
-    color: #009900;
+.regular-price span.price-after {
+    color: #13b651;
 }
 
-.wphpc-main-wrapper .wphpc-item span.sale-price b {
-    font-size: 16px;
+
+/* Buynow Button */
+
+a.wphpc-buy-now-btn:hover::before {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+a.wphpc-buy-now-btn::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    background-color: #253b70;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transform: scale(0.2, 1);
+    transform: scale(0.2, 1);
+}
+
+a.wphpc-buy-now-btn {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    padding: 17px 40px;
+    line-height: 26px;
+    color: #ffffff !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    transition: all 500ms ease;
+    z-index: 1;
+    background-color: #ff7162;
 }
 
 
@@ -92,29 +261,41 @@
 .wphpc-pagination {
     width: 100%;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.wphpc-pagination .page-numbers {
-    display: inline-block;
-    padding: 5px 10px;
+.wphpc-pagination .page-numbers li,
+div.wphpc-pagination>ul.page-numbers>li>span.page-numbers,
+div.wphpc-pagination>ul.page-numbers>li>a.page-numbers {
     margin: 0 2px 0 0;
-    border: 1px solid #eee;
-    line-height: 1;
     text-decoration: none;
-    border-radius: 2px;
-    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    height: 60px;
+    font-weight: 700;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 500ms ease;
+    border: 1px solid #e7e7e7;
+    color: #2b3c6b;
 }
 
-.wphpc-pagination .page-numbers.current,
-a.page-numbers:hover {
-    background: #f9f9f9;
+div.wphpc-pagination>ul.page-numbers>li>span.page-numbers.current,
+div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
+    background: #ff7162;
+    border: 1px solid #ff7162;
+    color: #FFF;
 }
 
 
 /* Details Page css */
 
 .wphpc-details-wrapper {
-    width: 1000px;
+    width: 100%;
     margin: 150px auto;
     display: flex;
     flex-wrap: wrap;
@@ -124,10 +305,12 @@ a.page-numbers:hover {
 
 .wphpc-details-wrapper .wphpc-details-image {
     min-height: 100px;
-    padding: 5px;
-    margin-right: 20px;
-    border: 0px solid #009900;
-    width: 350px;
+    width: 500px;
+    display: block;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 40px;
 }
 
 .wphpc-details-wrapper .wphpc-details-image img {
@@ -141,20 +324,54 @@ a.page-numbers:hover {
     flex: 1;
 }
 
-.wphpc-details-wrapper .wphpc-details-description h5.wphpc-details-book-title {
-    margin-bottom: 10px;
-    color: #242424;
-    font-size: 24px;
+.wphpc-details-wrapper .wphpc-details-description h2.wphpc-details-book-title {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    line-height: 40px;
+    color: #2b3c6b;
+    font-weight: 900;
+    margin-bottom: 21px;
 }
 
-.wphpc-details-wrapper .wphpc-details-description span {
-    font-size: 14px;
-    display: inline-block;
-    border: 0px solid #000;
+.wphpc-details-wrapper .wphpc-details-description table.wphpc-single-info-table {
+    border: 0px solid #CCC;
     width: 100%;
-    margin: 0px!important;
-    padding: 0px!important;
-    margin-bottom: 10px!important;
+}
+
+.wphpc-details-wrapper .wphpc-details-description table.wphpc-single-info-table td {
+    border: 0;
+    padding-left: 0px;
+}
+
+.wphpc-details-wrapper .wphpc-details-description table.wphpc-single-info-table td .wphpc-single-stock,
+.wphpc-details-wrapper .wphpc-details-description table.wphpc-single-info-table td.wphpc-single-tbl-left {
+    width: 100px;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #2b3c6b;
+    margin-right: 5px;
+}
+
+.wphpc-details-wrapper .wphpc-details-description table.wphpc-single-info-table td .wphpc-single-stock.in {
+    color: #13b651;
+}
+
+.wphpc-details-wrapper .wphpc-details-description table.wphpc-single-info-table td .wphpc-single-stock.out {
+    color: #ff7162;
+}
+
+.wphpc-details-wrapper .wphpc-details-description .wphpc-short-description p,
+.wphpc-details-wrapper .wphpc-details-description .wphpc-short-description span,
+.wphpc-details-description-content p {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 26px;
+    color: #615e5d;
+    margin-bottom: 0px;
+    font-style: normal;
+    transition: all 500ms ease;
 }
 
 .wphpc-details-wrapper .wphpc-details-description span b {
@@ -173,12 +390,24 @@ a.page-numbers:hover {
 }
 
 .wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-title {
-    border: 0px solid #009900;
-    padding: 0 8px;
+    border-bottom: 1px solid #CCC;
+    padding: 15px 0;
+    margin: 50px 0;
 }
 
-.wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-title hr {
-    margin-bottom: 10px;
+.wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-title span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFF;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px 10px 0 0;
+    padding: 16px 31px 16px 30px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    background: #ff7162;
+    border-color: #ff7162;
 }
 
 .wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-content {

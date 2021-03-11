@@ -16,5 +16,5 @@ if ( ! defined('ABSPATH') ) exit;
         </div>
     </div>
     
-    <?php $this->wphpc_admin_sidebar(); ?>   
+    <?php include_once('partial/admin-sidebar.php'); ?>   
 </div>
