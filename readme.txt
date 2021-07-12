@@ -1,45 +1,64 @@
 === HM Product Catalog - Responsive Product Showcase Plugin ===
-Contributors: mhmrajib, hmplugin
+Contributors: hmplugin, mhmrajib
 Donate link: https://www.paypal.me/mhmrajib
 Tags: catalog, product, product catalog, product catalogue, products
-Requires at least: 4.6
-Tested up to: 5.6
-Stable tag: 1.5
-Requires PHP: 5.6
+Requires at least: 5.0
+Tested up to: 5.7.2
+Stable tag: 1.6
+Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A simple plugin to display products in your Post/Page area. Use shortcode: [hm_product_catalog]
+A responsive product catalog plugin to display products on your webpsite age.
 
 == Description ==
 
-[HM Product Catalog](https://www.hmplugin.com) is a Responsive Product catalog plugin to display Products in your Post/Page area. 
+[HM Product Catalog](https://www.hmplugin.com) is a Responsive Product catalog plugin to display Products on your page. 
 In Product details page it display SKU, Category, Regular Price, Sale Price, Description etc.
-Display anywhere in your Page or Post by using shortcode: [hm_product_catalog].
+Display anywhere in your Page by using shortcode: [hm_product_catalog].
 
-WP Products Catalog is a simple, effective and powerful plugin to showcase your desired Products.
+HM Products Catalog is a simple, effective and powerful plugin to showcase your desired Products.
 
 
 **🌟 Plugin Features:**
 
 * Easy to install
-* Fully integrated in WordPress
-* Display Products in catalog/showcase style
+* Display Products in catalog and category wise
 * Supported all Modern browsers
 * Easy to use and customize
-* Display on both Post and Page
 * Add Unlimited Products
 * Fully Responsive Plugin
-* Custom post type – add Product like a post
-* You can Add Product Title/Name, Description, Short Description, SKU, Currency Icon, Weight, Status, Product Image, Regular Price , Sale Price etc.
-* Display product limit added
-* Pagination included
-* Old price, New price styles included
-* Product hover effect added
-* Open product details page on the same tab or a new tab
-* Product Category Label option
-* Product Price Label option
-* Display column option
+* Control limit of products per page from shortcode
+* Pagination available
+* Two types of price: Regular and Sale
+* Multiple columns feature
+* Soting with various criteria
+* Showing 1-X of X Results
+* Product type simple or external/affiliat
+* Button with external url for external/affiliate product
+* 115 Currencies available
+* In stock/Out of stock
+
+
+**🌟 Options Available For Product:**
+* Product Type: Simple or External/Affiliate
+* External Product URL
+* Prodcut SKU
+* Prodcut Weight
+* Product Regular Price
+* Prodcut Sale Price
+* Stock Status: In stock / Out of stock
+* Product Status: Active or Inactive
+* Prodcut Short Description
+
+
+**🌟 Settings Available:**
+* Change Currency
+* Single page in new tab or same tab
+* Category label text
+* Price label text
+* Product Columns 2/3/4
+
 
 
 ➡️Useage of Shortcode:⬅️
@@ -48,9 +67,9 @@ WP Products Catalog is a simple, effective and powerful plugin to showcase your 
 
 <pre> [hm_product_catalog] </pre>
 
-<strong> Display 4 Products With Pagination </strong>
+<strong> Display 20 Products With Pagination </strong>
 
-<pre> [hm_product_catalog display=4 pagination=true] </pre>
+<pre> [hm_product_catalog display=20 pagination=true] </pre>
 
 <strong> Show Products of a specific Catalog </strong>
 
@@ -124,12 +143,11 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 
 == Screenshots ==
 
-1. Adding prodcut in admin section. Go to HM Product Catalog > Add New
-2. Using the shortcode in any page
-3. Displaying all products at front page
-4. Displaying 4 products with pagination
-5. Displying products of Clothing category
-6. A product details page
+1. Displaying products with sorting and paginations enabled
+2. Displaying single product
+3. Adding product in admin section. Go to HM Product Catalog > Add New
+4. Displaying product list in admin panel
+5. Using the shortcode in any page
 
 
 == Changelog ==
@@ -143,7 +161,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 * Styling improved
 * Pagination styling changed
 * 115 Currency added
-* In stock/Out of stock option added added
+* In stock/Out of stock option added
 * SKU and Stock column added to admin product list
 * Product status dropdown to radio button in admin panel
 * Admin menu rearranged
