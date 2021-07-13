@@ -12,7 +12,15 @@ $wphpcCurrencySymbol    = $this->get_currency_symbol( $wphpcCurrency );
 
 $wphpcColumn = isset( $attr['column'] ) ? $attr['column'] : $wphpcProductColumn;
 
-$wphpcPaged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+if ( is_front_page() ) {
+ 
+  $wphpcPaged           = ( get_query_var('page') ) ? get_query_var('page') : 1;
+ 
+} else {
+
+  $wphpcPaged           = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+}
 
 $wphpcProductsArr = array(
   'post_type' => 'products',

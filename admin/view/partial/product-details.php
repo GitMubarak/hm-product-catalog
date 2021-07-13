@@ -18,7 +18,7 @@
         </th>
         <td>
             <input type="text" name="wphpc_product_url" value="<?php esc_attr_e( $wphpc_product_url ); ?>" class="regular-text" placeholder="<?php esc_attr_e( 'https://', WPHPC_TXT_DOMAIN ); ?>">
-            <span><?php esc_html_e( 'Enter the external URL to the product', WPHPC_TXT_DOMAIN ); ?>.</span>
+            <span><?php _e( 'Enter the external URL to the product', WPHPC_TXT_DOMAIN ); ?>.</span>
         </td>
     </tr>
     <tr class="wphpc_sku">

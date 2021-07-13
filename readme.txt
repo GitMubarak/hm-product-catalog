@@ -9,11 +9,11 @@ Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A responsive product catalog plugin to display products on your webpsite age.
+A responsive product catalog plugin to display products on your webpsite page.
 
 == Description ==
 
-[HM Product Catalog](https://www.hmplugin.com) is a Responsive Product catalog plugin to display Products on your page. 
+[HM Product Catalog](https://www.hmplugin.com) is a Responsive Product catalog plugin to display products on your website page. 
 In Product details page it display SKU, Category, Regular Price, Sale Price, Description etc.
 Display anywhere in your Page by using shortcode: [hm_product_catalog].
 
@@ -151,6 +151,13 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 
 
 == Changelog ==
+
+= 1.6 =
+* Sidebar added to single page
+* Responsive issue fixed in single page
+* Back button added to single page
+* Code optimized
+* Css Updated
 
 = 1.5 =
 * Soting with various option added

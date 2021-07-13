@@ -59,14 +59,11 @@ $wphpc_currency         = isset( $wphpcGeneralSettings['wphpc_currency'] ) ? $wp
                     </tr>
                     <tr class="wphpc_details_is_external">
                         <th scope="row">
-                            <label
-                                for="wphpc_details_is_external"><?php esc_html_e('Single Page in New Tab?', WPHPC_TXT_DOMAIN); ?></label>
+                            <label for="wphpc_details_is_external"><?php _e('Single Page in New Tab?', WPHPC_TXT_DOMAIN); ?></label>
                         </th>
                         <td>
-                            <input type="checkbox" name="wphpc_details_is_external" class="wphpc_details_is_external" value="1"
-                                <?php if ($wphpcGeneralSettings['wphpc_details_is_external'] == "1") {
-                                                                                                                                    echo 'checked';
-                                                                                                                                } ?>>
+                            <input type="checkbox" name="wphpc_details_is_external" id="wphpc_details_is_external" value="1"
+                                <?php echo $wphpcGeneralSettings['wphpc_details_is_external'] ? 'checked' : null; ?> >
                         </td>
                     </tr>
                     <tr class="wphpc_cat_label_txt">

@@ -292,25 +292,35 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
 }
 
 
-/* Details Page css */
+/* Single page css started */
+
+.wphpc-single-section {
+    width: 100%;
+    margin: 80px auto;
+    min-height: 100px;
+}
+
+.wphpc-details-column {
+    float: left;
+}
 
 .wphpc-details-wrapper {
-    width: 100%;
-    margin: 150px auto;
-    display: flex;
-    flex-wrap: wrap;
+    padding-right: 40px;
+    width: -webkit-calc(100% - 300px);
+    width: -moz-calc(100% - 300px);
+    width: calc(100% - 300px);
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-gap: 10px;
     min-height: 100px;
-    border: 0px solid #000;
 }
 
 .wphpc-details-wrapper .wphpc-details-image {
     min-height: 100px;
-    width: 500px;
-    display: block;
+    width: 100%;
     border: 1px solid #e5e5e5;
     border-radius: 20px;
     overflow: hidden;
-    margin-right: 40px;
 }
 
 .wphpc-details-wrapper .wphpc-details-image img {
@@ -320,8 +330,8 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
 }
 
 .wphpc-details-wrapper .wphpc-details-description {
-    border: 0px solid #000;
-    flex: 1;
+    font-size: 14px;
+    padding-left: 40px;
 }
 
 .wphpc-details-wrapper .wphpc-details-description h2.wphpc-details-book-title {
@@ -385,8 +395,9 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
     border: 0px solid #000;
     margin-top: 20px;
     font-size: 14px;
-    display: block;
     width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-title {
@@ -414,6 +425,13 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
     padding: 0 8px;
 }
 
+.wphpc-sidebar-right {
+    width: 300px;
+}
+
+
+/* Single page css ended */
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 
@@ -434,22 +452,21 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
         grid-template-columns: repeat(2, 1fr);
     }
     .wphpc-details-wrapper {
-        display: block;
         width: 100%;
     }
     .wphpc-details-wrapper .wphpc-details-image {
-        width: 100%;
-        display: inline-block;
-        padding: 10px;
-        margin-bottom: 30px;
-        text-align: center;
+        width: 300px;
     }
     .wphpc-details-wrapper .wphpc-details-image img {
-        width: 300px;
-        margin: 0 auto;
+        width: 100%;
     }
     .wphpc-details-wrapper .wphpc-details-description {
         padding: 10px;
+    }
+    .wphpc-details-wrapper .wphpc-details-description-full .wphpc-details-description-title {
+        border-bottom: 1px solid #CCC;
+        padding: 0 0 15px 0;
+        margin: 10px 0;
     }
 }
 
@@ -466,14 +483,18 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
         margin-bottom: 15px;
     }
     .wphpc-details-wrapper {
-        display: block;
+        display: inline-block;
         width: 100%;
+        padding-right: 0px;
     }
     .wphpc-details-wrapper .wphpc-details-image {
-        width: 100%;
+        width: 300px;
+        margin: 0 auto;
         display: inline-block;
-        padding: 10px;
         margin-bottom: 30px;
+    }
+    .wphpc-details-wrapper .wphpc-details-image img {
+        width: 100%;
     }
     .wphpc-details-wrapper .wphpc-details-description {
         padding: 10px;
