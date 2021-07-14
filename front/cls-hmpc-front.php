@@ -19,7 +19,7 @@ class WPHPC_Front {
 		
 		global $post;
     	
-		//if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'hm_product_catalog') ) {
+		if ( has_shortcode( $post->post_content, 'hm_product_catalog') ) {
 
 			wp_enqueue_style(	'wphpc-jquery-ui',
 								WPHPC_ASSETS . 'css/jquery-ui.css',
@@ -28,7 +28,7 @@ class WPHPC_Front {
 								FALSE );
 
 			wp_enqueue_style(	'wphpc-front',
-								WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'front-style.css',
+								WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'front.css',
 								array(),
 								$this->wphpc_version,
 								FALSE );
@@ -44,11 +44,22 @@ class WPHPC_Front {
 								TRUE );
 
 			wp_enqueue_script(  'wphpc-front',
-								WPHPC_ASSETS . 'js/wphpc-front-script.js',
+								WPHPC_ASSETS . 'js/wphpc-front.js',
 								array('jquery'),
 								$this->wphpc_version,
 								TRUE );
-		//}
+		}
+
+		if ( 'products' === $post->post_type ) {
+			
+			wp_enqueue_style(	'wphpc-single',
+								WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'single.css',
+								array(),
+								$this->wphpc_version,
+								FALSE );
+
+		}
+
 	}
 
 	function wphpc_load_shortcode() {

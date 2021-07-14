@@ -1,6 +1,8 @@
 <?php
 if ( ! defined('ABSPATH') ) exit;
 
+global $post;
+
 $wphpcGeneralSettings   = stripslashes_deep( unserialize( get_option('wphpc_general_settings') ) );
 $wphpcCurrency          = isset( $wphpcGeneralSettings['wphpc_currency'] ) ? $wphpcGeneralSettings['wphpc_currency'] : '';
 $wphpcDetailsIsSxternal = ($wphpcGeneralSettings['wphpc_details_is_external'] == 1) ? ' target="_blank"' : '';
@@ -103,8 +105,8 @@ if ( $wphpcProducts->have_posts() ) {
   <div class="wphpc-main-wrapper <?php esc_attr_e('wphpc-product-column-' . $wphpcColumn); ?>">
       <?php 
       while ( $wphpcProducts->have_posts() ) {
+
         $wphpcProducts->the_post();
-        global $post; 
         ?>
         <div class="wphpc-item">
           <div class="wphpc-image-box">

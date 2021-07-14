@@ -156,6 +156,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 * Sidebar added to single page
 * Responsive issue fixed in single page
 * Back button added to single page
+* Assets will load to specific page only
 * Code optimized
 * Css Updated
 

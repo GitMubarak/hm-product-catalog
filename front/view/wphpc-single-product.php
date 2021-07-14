@@ -152,7 +152,7 @@ $wphpc_weight           = get_post_meta( $post->ID, 'wphpc_weight', true );
         
         if ( ! $wphpc_details_is_external ) {
             ?>
-            <a href="#" class="button wbg-btn-back" onclick="javascript:history.back()" style="width: 100px; padding: 10px; text-align:center;"><< <?php _e('Back', WBG_TXT_DOMAIN); ?></a>
+            <a href="#" class="button wbg-btn-back" onclick="javascript:history.back()"><< <?php _e('Back', WBG_TXT_DOMAIN); ?></a>
             <?php
         }
         ?>
@@ -160,7 +160,13 @@ $wphpc_weight           = get_post_meta( $post->ID, 'wphpc_weight', true );
     </div>
 
     <div class="wphpc-details-column wphpc-sidebar-right">
-        <?php dynamic_sidebar(); ?>
+        <?php
+            if ( function_exists( 'register_sidebar' ) ) {
+                dynamic_sidebar();
+            } else {
+                _e('No sidebar registered', WBG_TXT_DOMAIN);
+            }
+        ?>
     </div>
 
 </div>
