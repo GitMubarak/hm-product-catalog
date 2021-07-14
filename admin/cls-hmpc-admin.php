@@ -58,7 +58,7 @@ class WPHPC_Admin {
 
 		wp_enqueue_style(
 			$this->wphpc_assets_prefix . 'admin-style',
-			WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'admin-style.css',
+			WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'admin.css',
 			array(),
 			$this->wphpc_version,
 			FALSE
@@ -70,7 +70,7 @@ class WPHPC_Admin {
 
 		wp_enqueue_script(
 			$this->wphpc_assets_prefix . 'admin-script',
-			WPHPC_ASSETS . 'js/' . $this->wphpc_assets_prefix . 'admin-script.js',
+			WPHPC_ASSETS . 'js/' . $this->wphpc_assets_prefix . 'admin.js',
 			array('jquery'),
 			$this->wphpc_version,
 			TRUE

@@ -79,6 +79,35 @@
     color: #ff7162;
 }
 
+.regular-price span.wphpc-price {
+    display: inline;
+    border: 0px solid #000;
+    width: 100%;
+    margin: 0px!important;
+    padding: 0px!important;
+    color: #ff7162;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.regular-price span.wphpc-price.single {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.regular-price span.price-before {
+    color: #ff7162;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.regular-price span.price-after {
+    color: #13b651;
+}
+
 .wphpc-details-wrapper .wphpc-details-description .wphpc-short-description p,
 .wphpc-details-wrapper .wphpc-details-description .wphpc-short-description span,
 .wphpc-details-description-content p {
