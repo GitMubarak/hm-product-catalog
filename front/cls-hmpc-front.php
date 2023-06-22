@@ -75,7 +75,7 @@ class WPHPC_Front {
 
 		$output = '';
 		ob_start();
-		include WPHPC_PATH . 'front/view/wphpc-front-view.php';
+		include WPHPC_PATH . 'front/view/loop.php';
 		$output .= ob_get_clean();
 		return $output;
 	}
@@ -85,7 +85,7 @@ class WPHPC_Front {
 		global $post;
 		
 		if ( 'products' === $post->post_type && locate_template( array( 'wphpc-single-product.php' ) ) !== $template ) {
-			return WPHPC_PATH . 'front/view/wphpc-single-product.php';
+			return WPHPC_PATH . 'front/view/single.php';
 		}
 
 		return $template;

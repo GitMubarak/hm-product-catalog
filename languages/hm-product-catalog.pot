@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-06-22 20:43+0600\n"
+"POT-Creation-Date: 2023-06-22 21:03+0600\n"
 "PO-Revision-Date: 2021-12-27 04:06+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -261,31 +261,31 @@ msgstr ""
 msgid "4"
 msgstr ""
 
-#: front/view/wphpc-front-view.php:181
+#: front/view/loop.php:181
 msgid "« "
 msgstr ""
 
-#: front/view/wphpc-front-view.php:182
+#: front/view/loop.php:182
 msgid " »"
 msgstr ""
 
-#: front/view/wphpc-front-view.php:193
+#: front/view/loop.php:193
 msgid "No products found!"
 msgstr ""
 
-#: front/view/wphpc-single-product.php:104
+#: front/view/single.php:104
 msgid "Buy Now"
 msgstr ""
 
-#: front/view/wphpc-single-product.php:144
+#: front/view/single.php:144
 msgid "Description"
 msgstr ""
 
-#: front/view/wphpc-single-product.php:155
+#: front/view/single.php:155
 msgid "Back"
 msgstr ""
 
-#: front/view/wphpc-single-product.php:167
+#: front/view/single.php:167
 msgid "No sidebar registered"
 msgstr ""
 
