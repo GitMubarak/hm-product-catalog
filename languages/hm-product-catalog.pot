@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-01-20 03:10+0600\n"
+"POT-Creation-Date: 2023-06-22 20:43+0600\n"
 "PO-Revision-Date: 2021-12-27 04:06+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -11,555 +11,284 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: _e;esc_htm;esc_attr;esc_html_e;esc_html_;__(;__\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/cls-top-news-admin.php:65 admin/cls-top-news-admin.php:66
-msgid "WP Top News"
+#: admin/cls-hmpc-admin.php:26 admin/cls-hmpc-admin.php:27
+msgid "HM Product Catalog"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:76 admin/cls-top-news-admin.php:77
-msgid "API Settings"
-msgstr ""
-
-#: admin/cls-top-news-admin.php:85 admin/cls-top-news-admin.php:114
-#: admin/cls-top-news-admin.php:115 admin/view/settings.php:9
-msgid "Settings"
-msgstr ""
-
-#: admin/cls-top-news-admin.php:86 admin/view/general-settings.php:16
+#: admin/cls-hmpc-admin.php:37 admin/cls-hmpc-admin.php:38
+#: admin/view/wphpc-admin-settings.php:23
 msgid "General Settings"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:94 admin/cls-top-news-admin.php:95
-#: admin/view/manage-cache.php:28
-msgid "Manage Cache"
+#: admin/cls-hmpc-admin.php:46 admin/cls-hmpc-admin.php:47
+msgid "Help & Usage"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:103 admin/cls-top-news-admin.php:104
-msgid "Usage & Tutorial"
+#: admin/cls-hmpc-admin.php:83 admin/cls-hmpc-admin.php:85
+msgid "Products"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:124 admin/cls-top-news-admin.php:125
-msgid "Featured Settings"
+#: admin/cls-hmpc-admin.php:84
+msgid "Product"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:133 admin/cls-top-news-admin.php:134
-msgid "Ticker Settings"
+#: admin/cls-hmpc-admin.php:86
+msgid "Parent Product"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:142 admin/cls-top-news-admin.php:143
-#: admin/view/help.php:9
-msgid "How it works"
+#: admin/cls-hmpc-admin.php:87
+msgid "All Products"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:156 admin/cls-top-news-admin.php:160
-msgid "All News"
+#: admin/cls-hmpc-admin.php:88
+msgid "View Product"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:157
-msgid "WP News"
+#: admin/cls-hmpc-admin.php:89
+msgid "Add New Product"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:158
-msgid "News"
+#: admin/cls-hmpc-admin.php:90
+msgid "Add New"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:159
-msgid "Parent News"
+#: admin/cls-hmpc-admin.php:91
+msgid "Edit Product"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:161
-msgid "View News"
+#: admin/cls-hmpc-admin.php:92
+msgid "Update Product"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:162
-msgid "Add News"
+#: admin/cls-hmpc-admin.php:93
+msgid "Search Product"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:163
-msgid "Add News Item"
-msgstr ""
-
-#: admin/cls-top-news-admin.php:164
-msgid "Edit News"
-msgstr ""
-
-#: admin/cls-top-news-admin.php:165
-msgid "Update News"
-msgstr ""
-
-#: admin/cls-top-news-admin.php:166
-msgid "Search News"
-msgstr ""
-
-#: admin/cls-top-news-admin.php:167
+#: admin/cls-hmpc-admin.php:94
 msgid "Not Found"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:168
+#: admin/cls-hmpc-admin.php:95
 msgid "Not found in Trash"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:171
-msgid "wtn_news"
+#: admin/cls-hmpc-admin.php:99
+msgid "products"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:172
-msgid "Description For News"
+#: admin/cls-hmpc-admin.php:100
+msgid "Description For Products"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:200 admin/cls-top-news-admin.php:210
-msgid "News Categories"
+#: admin/cls-hmpc-admin.php:127
+msgid "Search Product Catalog"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:201
-msgid "News Category"
+#: admin/cls-hmpc-admin.php:128
+msgid "All Catalogs"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:202
-msgid "Search News Categories"
+#: admin/cls-hmpc-admin.php:129
+msgid "Parent Product Catalog"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:203
-msgid "All News Categories"
+#: admin/cls-hmpc-admin.php:130
+msgid "Parent Product Catalog:"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:204
-msgid "Parent News Category"
+#: admin/cls-hmpc-admin.php:131
+msgid "Edit Product Catalog"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:205
-msgid "Parent News Category:"
+#: admin/cls-hmpc-admin.php:132
+msgid "Update Product Catalog"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:206
-msgid "Edit News Category"
+#: admin/cls-hmpc-admin.php:133
+msgid "Add New Catalog"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:207
-msgid "Update News Category"
+#: admin/cls-hmpc-admin.php:134
+msgid "New Product Catalog Name"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:208
-msgid "Add New News Category"
+#: admin/cls-hmpc-admin.php:135
+msgid "Product Catalogs"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:209
-msgid "New News Category Name"
+#: admin/cls-hmpc-admin.php:150
+msgid "Search Product Categories"
 msgstr ""
 
-#: admin/cls-top-news-admin.php:233
-msgid "News Information"
+#: admin/cls-hmpc-admin.php:151
+msgid "All Categories"
 msgstr ""
 
-#: admin/view/api-settings.php:24
-msgid "API Key Settings"
+#: admin/cls-hmpc-admin.php:152
+msgid "Parent Product Category"
 msgstr ""
 
-#: admin/view/api-settings.php:42
-msgid "API Key"
+#: admin/cls-hmpc-admin.php:153
+msgid "Parent Product Category:"
 msgstr ""
 
-#: admin/view/api-settings.php:46
-msgid "Get your API key from"
+#: admin/cls-hmpc-admin.php:154
+msgid "Edit Product Category"
 msgstr ""
 
-#: admin/view/api-settings.php:46
-msgid "here"
+#: admin/cls-hmpc-admin.php:155
+msgid "Update Product Category"
 msgstr ""
 
-#: admin/view/api-settings.php:53 admin/view/general-settings.php:272
-#: admin/view/partial/featured-general.php:91 admin/view/partial/general.php:69
-#: admin/view/partial/ticker-content.php:121
-#: admin/view/partial/ticker-styles.php:173
-msgid "Save Settings"
+#: admin/cls-hmpc-admin.php:156
+msgid "Add New Category"
 msgstr ""
 
-#: admin/view/api-settings.php:58
-msgid "read"
+#: admin/cls-hmpc-admin.php:157
+msgid "New Product Category Name"
 msgstr ""
 
-#: admin/view/featured.php:9
-msgid "Featured News Settings"
+#: admin/cls-hmpc-admin.php:158
+msgid "Product Categories"
 msgstr ""
 
-#: admin/view/featured.php:22 admin/view/ticker.php:22
-msgid "Content"
+#: admin/cls-hmpc-admin.php:174
+msgid "Product Details"
 msgstr ""
 
-#: admin/view/general-settings.php:35
-msgid "Display News From"
+#: admin/cls-hmpc-admin.php:183
+msgid "Product Short Description"
 msgstr ""
 
-#: admin/view/general-settings.php:41 admin/view/general-settings.php:111
-#: admin/view/general-settings.php:185 admin/view/general-settings.php:247
-#: admin/view/partial/featured-general.php:25
-#: admin/view/partial/featured-general.php:45
-#: admin/view/partial/featured-general.php:65
-#: admin/view/partial/ticker-content.php:25
-#: admin/view/partial/ticker-content.php:45
-#: admin/view/partial/ticker-content.php:65
-#: admin/view/partial/ticker-content.php:85
-#: admin/view/partial/ticker-styles.php:31
-#: admin/view/partial/ticker-styles.php:50
-#: admin/view/partial/ticker-styles.php:71
-#: admin/view/partial/ticker-styles.php:97
-#: admin/view/partial/ticker-styles.php:116
-#: admin/view/partial/ticker-styles.php:137
-#: admin/view/partial/ticker-styles.php:155
-msgid "Please Upgrade Now!"
+#: admin/view/partial/product-details.php:5
+msgid "Product Type"
 msgstr ""
 
-#: admin/view/general-settings.php:48 admin/view/general-settings.php:59
-msgid "News Source"
+#: admin/view/partial/product-details.php:9
+msgid "Simple"
 msgstr ""
 
-#: admin/view/general-settings.php:51 admin/view/general-settings.php:104
-msgid "Country Source"
+#: admin/view/partial/product-details.php:12
+msgid "External/Affiliate"
 msgstr ""
 
-#: admin/view/general-settings.php:78
-msgid "For More Sources Upgrade Now!"
+#: admin/view/partial/product-details.php:17
+msgid "Product URL"
 msgstr ""
 
-#: admin/view/general-settings.php:136
-#: admin/view/partial/featured-general.php:59
-#: admin/view/partial/ticker-content.php:39
-msgid "Number of News"
+#: admin/view/partial/product-details.php:21
+msgid "Enter the external URL to the product"
 msgstr ""
 
-#: admin/view/general-settings.php:144
-msgid "Layout"
+#: admin/view/partial/product-details.php:26
+msgid "SKU/Product Id:"
 msgstr ""
 
-#: admin/view/general-settings.php:148
-msgid "List"
+#: admin/view/partial/product-details.php:34
+msgid "Weight:"
 msgstr ""
 
-#: admin/view/general-settings.php:151
-msgid "Grid"
+#: admin/view/partial/product-details.php:42
+msgid "Regular Price:"
 msgstr ""
 
-#: admin/view/general-settings.php:156
-msgid "For Ticker Upgrade Now!"
+#: admin/view/partial/product-details.php:51
+msgid "Sale Price:"
 msgstr ""
 
-#: admin/view/general-settings.php:163
-msgid "Ticker"
+#: admin/view/partial/product-details.php:60
+msgid "Stock Status"
 msgstr ""
 
-#: admin/view/general-settings.php:171
-msgid "Grid View Columns"
+#: admin/view/partial/product-details.php:64
+msgid "In stock"
 msgstr ""
 
-#: admin/view/general-settings.php:179 admin/view/partial/ticker-content.php:79
-msgid "Ticker Type"
+#: admin/view/partial/product-details.php:67
+msgid "Out of stock"
 msgstr ""
 
-#: admin/view/general-settings.php:192 admin/view/partial/ticker-content.php:92
-msgid "Marquee"
-msgstr ""
-
-#: admin/view/general-settings.php:195 admin/view/partial/ticker-content.php:95
-msgid "Horizontal"
-msgstr ""
-
-#: admin/view/general-settings.php:198 admin/view/partial/ticker-content.php:98
-msgid "Typewriter"
-msgstr ""
-
-#: admin/view/general-settings.php:201
-#: admin/view/partial/ticker-content.php:101
-msgid "Vertical"
-msgstr ""
-
-#: admin/view/general-settings.php:209
-#: admin/view/partial/featured-general.php:19
-msgid "Title Word Length"
-msgstr ""
-
-#: admin/view/general-settings.php:217
-msgid "Description Word Length"
-msgstr ""
-
-#: admin/view/general-settings.php:225
-msgid "Display Source"
-msgstr ""
-
-#: admin/view/general-settings.php:233
-msgid "Display Date"
-msgstr ""
-
-#: admin/view/general-settings.php:241 admin/view/partial/general.php:42
-msgid "Enable RTL"
-msgstr ""
-
-#: admin/view/general-settings.php:261
-#: admin/view/partial/featured-general.php:79
-#: admin/view/partial/ticker-content.php:109
-msgid "Shortcode"
-msgstr ""
-
-#: admin/view/general-settings.php:265
-msgid "Use this shortcode in a page, post or widget area to display your desired news."
-msgstr ""
-
-#: admin/view/help-usage.php:14
-msgid "Available Shortcoded Options For Pro Version"
-msgstr ""
-
-#: admin/view/help-usage.php:16
-msgid "Display Grid View"
-msgstr ""
-
-#: admin/view/help-usage.php:19
-msgid "Display List View"
-msgstr ""
-
-#: admin/view/help-usage.php:22
-msgid "Display News Ticker"
-msgstr ""
-
-#: admin/view/help-usage.php:25
-msgid "Control Display Number"
-msgstr ""
-
-#: admin/view/help-usage.php:28
-msgid "Display With News Source"
-msgstr ""
-
-#: admin/view/help-usage.php:36
-msgid "Source"
-msgstr ""
-
-#: admin/view/help-usage.php:37 admin/view/help-usage.php:69
-#: admin/view/partial/general.php:24
-msgid "Name"
-msgstr ""
-
-#: admin/view/help-usage.php:38
-msgid "Url"
-msgstr ""
-
-#: admin/view/help-usage.php:60
-msgid "Display With Country"
-msgstr ""
-
-#: admin/view/help-usage.php:68
-msgid "Country"
-msgstr ""
-
-#: admin/view/help-usage.php:87
-msgid "Hide Description"
-msgstr ""
-
-#: admin/view/help-usage.php:90
-msgid "Control Description Length"
-msgstr ""
-
-#: admin/view/manage-cache.php:33
-msgid "Cache Cleared Successfully"
-msgstr ""
-
-#: admin/view/manage-cache.php:42
-msgid "Click Here to Clear Cache"
-msgstr ""
-
-#: admin/view/manage-cache.php:50
-msgid "Caching Time"
-msgstr ""
-
-#: admin/view/manage-cache.php:54
-msgid "1 Hour"
-msgstr ""
-
-#: admin/view/manage-cache.php:57
-msgid "6 Hour"
-msgstr ""
-
-#: admin/view/manage-cache.php:60
-msgid "12 Hour"
-msgstr ""
-
-#: admin/view/manage-cache.php:63
-msgid "24 Hour"
-msgstr ""
-
-#: admin/view/manage-cache.php:67
-msgid "For free API users we recommend to set caching time to 24 Hours"
-msgstr ""
-
-#: admin/view/manage-cache.php:71
-msgid "Save Caching Time"
-msgstr ""
-
-#: admin/view/partial/featured-general.php:39
-#: admin/view/partial/ticker-content.php:19
-msgid "Display Only Todays"
-msgstr ""
-
-#: admin/view/partial/featured-general.php:83
-msgid "Use this shortcode to display featured news."
-msgstr ""
-
-#: admin/view/partial/general.php:19
-msgid "Order With"
-msgstr ""
-
-#: admin/view/partial/general.php:23
-msgid "Select One"
-msgstr ""
-
-#: admin/view/partial/general.php:25
-msgid "Date"
-msgstr ""
-
-#: admin/view/partial/general.php:26
-msgid "Post Order"
-msgstr ""
-
-#: admin/view/partial/general.php:30
-msgid "Order By"
-msgstr ""
-
-#: admin/view/partial/general.php:34
-msgid "Ascending"
-msgstr ""
-
-#: admin/view/partial/general.php:37
-msgid "Descending"
-msgstr ""
-
-#: admin/view/partial/general.php:50
-msgid "News Per Page"
-msgstr ""
-
-#: admin/view/partial/general.php:58
-msgid "Display Pagination"
-msgstr ""
-
-#: admin/view/partial/news-information.php:17
-msgid "Breaking"
-msgstr ""
-
-#: admin/view/partial/news-information.php:23
-#: admin/view/partial/news-information.php:43
-#: admin/view/partial/news-information.php:63
-msgid "Upgrade Now"
-msgstr ""
-
-#: admin/view/partial/news-information.php:37
-msgid "Display In Hero"
-msgstr ""
-
-#: admin/view/partial/news-information.php:57
-msgid "Is Featured"
-msgstr ""
-
-#: admin/view/partial/news-information.php:77
+#: admin/view/partial/product-details.php:72
 msgid "Status"
 msgstr ""
 
-#: admin/view/partial/news-information.php:81
+#: admin/view/partial/product-details.php:76
 msgid "Active"
 msgstr ""
 
-#: admin/view/partial/news-information.php:84
+#: admin/view/partial/product-details.php:79
 msgid "Inactive"
 msgstr ""
 
-#: admin/view/partial/ticker-content.php:59
-msgid "Ticker Label Text"
+#: admin/view/wphpc-admin-settings.php:41
+msgid "Currency:"
 msgstr ""
 
-#: admin/view/partial/ticker-content.php:113
-msgid "Use this shortcode to display ticker news."
+#: admin/view/wphpc-admin-settings.php:62
+msgid "Single Page in New Tab?"
 msgstr ""
 
-#: admin/view/partial/ticker-styles.php:20
-msgid "Ticker Label"
+#: admin/view/wphpc-admin-settings.php:72
+msgid "Category Label Text:"
 msgstr ""
 
-#: admin/view/partial/ticker-styles.php:25
-#: admin/view/partial/ticker-styles.php:91
-msgid "Background Color"
+#: admin/view/wphpc-admin-settings.php:82
+msgid "Price Label Text:"
 msgstr ""
 
-#: admin/view/partial/ticker-styles.php:44
-#: admin/view/partial/ticker-styles.php:110
-msgid "Font Color"
+#: admin/view/wphpc-admin-settings.php:92
+msgid "Products Columns:"
 msgstr ""
 
-#: admin/view/partial/ticker-styles.php:65
-msgid "Font Size"
+#: admin/view/wphpc-admin-settings.php:96
+msgid "--Select One--"
 msgstr ""
 
-#: admin/view/partial/ticker-styles.php:86
-msgid "Ticker Content"
+#: admin/view/wphpc-admin-settings.php:99
+msgid "2"
 msgstr ""
 
-#: admin/view/partial/ticker-styles.php:131
-msgid "Border Width"
+#: admin/view/wphpc-admin-settings.php:103
+msgid "3"
 msgstr ""
 
-#: admin/view/partial/ticker-styles.php:149
-msgid "Border Color"
+#: admin/view/wphpc-admin-settings.php:107
+msgid "4"
 msgstr ""
 
-#: admin/view/settings.php:22
-msgid "General"
-msgstr ""
-
-#: admin/view/ticker.php:9
-msgid "Ticker News Settings"
-msgstr ""
-
-#: admin/view/ticker.php:25
-msgid "Styles"
-msgstr ""
-
-#: freemius/templates/account/partials/site.php:339
-msgid " "
-msgstr ""
-
-#: front/view/external.php:71
-msgid "No news available right now!"
-msgstr ""
-
-#: front/view/external.php:114
-msgid "No Data Available"
-msgstr ""
-
-#: front/view/featured.php:91 front/view/hero.php:68
-#: front/view/internal.php:149 front/view/ticker.php:105
-msgid "No News Available"
-msgstr ""
-
-#: front/view/internal.php:137
+#: front/view/wphpc-front-view.php:181
 msgid "« "
 msgstr ""
 
-#: front/view/internal.php:138
+#: front/view/wphpc-front-view.php:182
 msgid " »"
 msgstr ""
 
-#: front/view/temp/grid.php:36 view/grid.php:41
-msgid "View More"
+#: front/view/wphpc-front-view.php:193
+msgid "No products found!"
 msgstr ""
 
-#: lib/freemius-integrator.php:61
-#, php-format
-msgid "Hey %1$s"
+#: front/view/wphpc-single-product.php:104
+msgid "Buy Now"
 msgstr ""
 
-#: lib/freemius-integrator.php:62
-#, php-format
-msgid "Please help us improve %2$s! If you opt-in, some data about your usage of %2$s will be sent to %5$s. If you skip this, that's okay! %2$s will still work just fine."
+#: front/view/wphpc-single-product.php:144
+msgid "Description"
 msgstr ""
 
-#: view/ticker.php:32
-msgid "Breaking News"
+#: front/view/wphpc-single-product.php:155
+msgid "Back"
+msgstr ""
+
+#: front/view/wphpc-single-product.php:167
+msgid "No sidebar registered"
+msgstr ""
+
+#: hm-product-catalog.php:36
+msgid "Donate us"
 msgstr ""
