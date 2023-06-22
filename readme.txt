@@ -1,40 +1,39 @@
-=== HM Product Catalog - Responsive Product Showcase Plugin ===
+=== Hm Product Catalog ===
 Contributors: hmplugin, mhmrajib
 Donate link: https://www.paypal.me/mhmrajib
-Tags: catalog, product, product catalog, product catalogue, products
-Requires at least: 5.0
-Tested up to: 5.7.2
-Stable tag: 1.6
+Tags: catalog, affiliate, amazon, amazon affiliates, store
+Requires at least: 5.2
+Tested up to: 6.1.1
+Stable tag: 1.7.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A responsive product catalog plugin to display products on your webpsite page.
+Create an affiliate product page and display product information in a details page.
 
 == Description ==
 
-[HM Product Catalog](https://www.hmplugin.com) is a Responsive Product catalog plugin to display products on your website page. 
-In Product details page it display SKU, Category, Regular Price, Sale Price, Description etc.
-Display anywhere in your Page by using shortcode: [hm_product_catalog].
+[HM Product Catalog](https://hmplugin.com/demo/products/) is a **WordPress Product Showcase Plugin** that can be use as an affiliate shop page for your WordPress website.
+If you have products which needs to display only and can be sold to other website then this is the right plugin for you.
 
-HM Products Catalog is a simple, effective and powerful plugin to showcase your desired Products.
+This plugin displays a beautiful responsive product page by using the shortcode: [hm_product_catalog].
+In Product details page it displays various information about the product like SKU, Category, Regular Price, Sale Price, Description etc.
 
+HM Products Catalog is a simple, effective and powerful plugin to create an affiliate shop page on your website.
 
 **🌟 Plugin Features:**
 
-* Easy to install
+* Easy to install and customization
 * Display Products in catalog and category wise
 * Supported all Modern browsers
-* Easy to use and customize
 * Add Unlimited Products
 * Fully Responsive Plugin
 * Control limit of products per page from shortcode
-* Pagination available
 * Two types of price: Regular and Sale
-* Multiple columns feature
+* Multiple columns grid feature
 * Soting with various criteria
 * Showing 1-X of X Results
-* Product type simple or external/affiliat
+* Product type simple or external/Affiliate
 * Button with external url for external/affiliate product
 * 115 Currencies available
 * In stock/Out of stock
@@ -77,7 +76,7 @@ HM Products Catalog is a simple, effective and powerful plugin to showcase your 
 
 
 **👨‍💻 Demo / Support/ Live Chat:**
-[HM Product Catalog: See Demo](https://demo.hmplugin.com/hm-product-catalog/)
+[HM Product Catalog: See Demo](https://hmplugin.com/demo/products/)
 
 
 **👍 Feedback/Rating:**
@@ -151,6 +150,15 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 
 
 == Changelog ==
+
+= 1.7.1 =
+* Css improved
+* Minor bug fixed
+* Support for WordPress 6.0
+
+= 1.7 =
+* Bug fixed
+* Minor css changed
 
 = 1.6 =
 * Sidebar added to single page
