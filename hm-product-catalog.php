@@ -1,13 +1,18 @@
 <?php
 /**
- * Plugin Name:	ProductCatalog
- * Plugin URI:	https://wordpress.org/plugins/hm-product-catalog/
- * Description:	Best Product Showcase & Affiliat Plugin for WordPress to display products in your webpage.
- * Version:		  1.7.1
- * Author:		  HM Plugin
- * Author URI:	https://hmplugin.com
- * License:		  GPL-2.0+
- * License URI:	http://www.gnu.org/licenses/gpl-2.0.txt
+ * Plugin Name:	      HM Product Catalog
+ * Plugin URI:	      https://wordpress.org/plugins/hm-product-catalog/
+ * Description:	      Product Showcase & Affiliat Plugin for WordPress to display products in your webpage.
+ * Version:		        1.7.2
+ * Author:		        HM Plugin
+ * Author URI:	      https://hmplugin.com
+ * Requires at least: 5.2
+ * Requires PHP:      7.2
+ * Tested up to:      6.2.2
+ * Text Domain:       hm-product-catalog
+ * Domain Path:       /languages/
+ * License:		        GPL-2.0+
+ * License URI:	      http://www.gnu.org/licenses/gpl-2.0.txt
  */
 if ( ! defined('ABSPATH') ) exit;
 
@@ -17,7 +22,7 @@ define('WPHPC_SLUG', plugin_basename(__FILE__));
 define('WPHPC_PRFX', 'wphpc_');
 define('WPHPC_CLS_PRFX', 'cls-hmpc-');
 define('WPHPC_TXT_DOMAIN', 'hm-product-catalog');
-define('WPHPC_VERSION', '1.7.1');
+define('WPHPC_VERSION', '1.7.2');
 
 require_once WPHPC_PATH . 'inc/' . WPHPC_CLS_PRFX . 'master.php';
 $wphpc = new WPHPC_Master();
