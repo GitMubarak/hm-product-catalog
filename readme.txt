@@ -152,7 +152,8 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 == Changelog ==
 
 = 1.7.2 =
-* Css improved
+* Admin bug fixed
+* Support for WP-6.2.2
 
 = 1.7.1 =
 * Css improved

@@ -23,8 +23,8 @@ class WPHPC_Admin {
 	function wphpc_admin_menu() {
 
 		add_menu_page(
-			__( 'HM Product Catalog', WPSD_TXT_DOMAIN ),
-			__( 'HM Product Catalog', WPSD_TXT_DOMAIN ),
+			__( 'HM Product Catalog', 'hm-product-catalog' ),
+			__( 'HM Product Catalog', 'hm-product-catalog' ),
 			'',
 			'wphpc-admin-settings',
 			'',
@@ -34,8 +34,8 @@ class WPHPC_Admin {
 
 		add_submenu_page(
 			'wphpc-admin-settings',
-			__( 'General Settings', WPSD_TXT_DOMAIN ),
-			__( 'General Settings', WPSD_TXT_DOMAIN ),
+			__( 'General Settings', 'hm-product-catalog' ),
+			__( 'General Settings', 'hm-product-catalog' ),
 			'manage_options',
 			'wphpc-settings-section',
 			array( $this, WPHPC_PRFX . 'settings' )
@@ -43,8 +43,8 @@ class WPHPC_Admin {
 
 		add_submenu_page(
 			'wphpc-admin-settings',
-			__( 'Help & Usage', WPHPC_TXT_DOMAIN ),
-			__( 'Help & Usage', WPHPC_TXT_DOMAIN ),
+			__( 'Help & Usage', 'hm-product-catalog' ),
+			__( 'Help & Usage', 'hm-product-catalog' ),
 			'manage_options',
 			'wphpc-get-help',
 			array( $this, WPHPC_PRFX . 'get_help' )
@@ -171,7 +171,7 @@ class WPHPC_Admin {
 	function wphpc_product_details_metaboxes() {
 		add_meta_box(
 			'wphpc_product_details_link',
-			__( 'Product Details', WPHPC_TXT_DOMAIN ),
+			__( 'Product Details', 'hm-product-catalog' ),
 			array($this, WPHPC_PRFX . 'product_details_content'),
 			'products',
 			'normal',
@@ -180,7 +180,7 @@ class WPHPC_Admin {
 
 		add_meta_box(
 			'wphpc-product-short-description',
-			__( 'Product Short Description', WPHPC_TXT_DOMAIN ),
+			__( 'Product Short Description', 'hm-product-catalog' ),
 			array( $this, 'wphpc_product_short_description'),
 			'products',
 			'normal',
@@ -270,8 +270,8 @@ class WPHPC_Admin {
 		?>
 		<div class="wphpc-alert <?php printf('%s', $type); ?>">
 			<span class="wphpc-closebtn">&times;</span>
-			<strong><?php esc_html_e(ucfirst($type), WPHPC_TXT_DOMAIN); ?>!</strong>
-			<?php esc_html_e($msg, WPHPC_TXT_DOMAIN); ?>
+			<strong><?php esc_html_e(ucfirst($type), 'hm-product-catalog'); ?>!</strong>
+			<?php esc_html_e($msg, 'hm-product-catalog'); ?>
 		</div>
 		<?php
 	}
