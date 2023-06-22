@@ -153,6 +153,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 
 = 1.7.2 =
 * Admin bug fixed
+* Single page text domain bug fixed
 * Support for WP-6.2.2
 * Language pot file added
 

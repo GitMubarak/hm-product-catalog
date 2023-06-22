@@ -119,7 +119,7 @@ if ( $wphpcProducts->have_posts() ) {
               $wphpc_image_url    = '';
             }
             ?>
-            <img src="<?php echo esc_url( $wphpc_image_url ); ?>" alt="<?php esc_attr_e( 'ALT', WPHPC_TXT_DOMAIN ); ?>">
+            <img src="<?php echo esc_url( $wphpc_image_url ); ?>" alt="<?php the_title(); ?>">
           </div>
           <a href="<?php echo get_the_permalink( $post->ID ); ?>" class="wphpc-product-title-link" <?php printf('%s', $wphpcDetailsIsSxternal); ?>>
             <?php
@@ -190,7 +190,7 @@ if ( $wphpcProducts->have_posts() ) {
   <?php 
   }
 } else {
-  ?><p class="wphpc-no-products-found"><?php _e('No products found!', WPHPC_TXT_DOMAIN); ?></p><?php
+  ?><p class="wphpc-no-products-found"><?php _e('No products found!', 'hm-product-catalog'); ?></p><?php
 }
 
 wp_reset_postdata();
