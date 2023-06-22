@@ -13,9 +13,14 @@ class WPHPC_Master {
 	*/
 	function __construct() {
 		$this->wphpc_version = WPHPC_VERSION;
+		add_action( 'plugins_loaded', array($this, 'hpc_load_plugin_textdomain') );
 		$this->wphpc_load_dependencies();
 		$this->wphpc_trigger_admin_hooks();
 		$this->wphpc_trigger_front_hooks();
+	}
+
+	function hpc_load_plugin_textdomain(){
+		load_plugin_textdomain( 'hm-product-catalog', FALSE, 'hm-product-catalog' . '/languages/' );
 	}
 
 	private function wphpc_load_dependencies() {

@@ -1,0 +1,565 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-01-20 03:10+0600\n"
+"PO-Revision-Date: 2021-12-27 04:06+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: _e;esc_htm;esc_attr;esc_html_e;esc_html_;__(;__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/cls-top-news-admin.php:65 admin/cls-top-news-admin.php:66
+msgid "WP Top News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:76 admin/cls-top-news-admin.php:77
+msgid "API Settings"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:85 admin/cls-top-news-admin.php:114
+#: admin/cls-top-news-admin.php:115 admin/view/settings.php:9
+msgid "Settings"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:86 admin/view/general-settings.php:16
+msgid "General Settings"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:94 admin/cls-top-news-admin.php:95
+#: admin/view/manage-cache.php:28
+msgid "Manage Cache"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:103 admin/cls-top-news-admin.php:104
+msgid "Usage & Tutorial"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:124 admin/cls-top-news-admin.php:125
+msgid "Featured Settings"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:133 admin/cls-top-news-admin.php:134
+msgid "Ticker Settings"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:142 admin/cls-top-news-admin.php:143
+#: admin/view/help.php:9
+msgid "How it works"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:156 admin/cls-top-news-admin.php:160
+msgid "All News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:157
+msgid "WP News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:158
+msgid "News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:159
+msgid "Parent News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:161
+msgid "View News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:162
+msgid "Add News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:163
+msgid "Add News Item"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:164
+msgid "Edit News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:165
+msgid "Update News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:166
+msgid "Search News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:167
+msgid "Not Found"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:168
+msgid "Not found in Trash"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:171
+msgid "wtn_news"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:172
+msgid "Description For News"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:200 admin/cls-top-news-admin.php:210
+msgid "News Categories"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:201
+msgid "News Category"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:202
+msgid "Search News Categories"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:203
+msgid "All News Categories"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:204
+msgid "Parent News Category"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:205
+msgid "Parent News Category:"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:206
+msgid "Edit News Category"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:207
+msgid "Update News Category"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:208
+msgid "Add New News Category"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:209
+msgid "New News Category Name"
+msgstr ""
+
+#: admin/cls-top-news-admin.php:233
+msgid "News Information"
+msgstr ""
+
+#: admin/view/api-settings.php:24
+msgid "API Key Settings"
+msgstr ""
+
+#: admin/view/api-settings.php:42
+msgid "API Key"
+msgstr ""
+
+#: admin/view/api-settings.php:46
+msgid "Get your API key from"
+msgstr ""
+
+#: admin/view/api-settings.php:46
+msgid "here"
+msgstr ""
+
+#: admin/view/api-settings.php:53 admin/view/general-settings.php:272
+#: admin/view/partial/featured-general.php:91 admin/view/partial/general.php:69
+#: admin/view/partial/ticker-content.php:121
+#: admin/view/partial/ticker-styles.php:173
+msgid "Save Settings"
+msgstr ""
+
+#: admin/view/api-settings.php:58
+msgid "read"
+msgstr ""
+
+#: admin/view/featured.php:9
+msgid "Featured News Settings"
+msgstr ""
+
+#: admin/view/featured.php:22 admin/view/ticker.php:22
+msgid "Content"
+msgstr ""
+
+#: admin/view/general-settings.php:35
+msgid "Display News From"
+msgstr ""
+
+#: admin/view/general-settings.php:41 admin/view/general-settings.php:111
+#: admin/view/general-settings.php:185 admin/view/general-settings.php:247
+#: admin/view/partial/featured-general.php:25
+#: admin/view/partial/featured-general.php:45
+#: admin/view/partial/featured-general.php:65
+#: admin/view/partial/ticker-content.php:25
+#: admin/view/partial/ticker-content.php:45
+#: admin/view/partial/ticker-content.php:65
+#: admin/view/partial/ticker-content.php:85
+#: admin/view/partial/ticker-styles.php:31
+#: admin/view/partial/ticker-styles.php:50
+#: admin/view/partial/ticker-styles.php:71
+#: admin/view/partial/ticker-styles.php:97
+#: admin/view/partial/ticker-styles.php:116
+#: admin/view/partial/ticker-styles.php:137
+#: admin/view/partial/ticker-styles.php:155
+msgid "Please Upgrade Now!"
+msgstr ""
+
+#: admin/view/general-settings.php:48 admin/view/general-settings.php:59
+msgid "News Source"
+msgstr ""
+
+#: admin/view/general-settings.php:51 admin/view/general-settings.php:104
+msgid "Country Source"
+msgstr ""
+
+#: admin/view/general-settings.php:78
+msgid "For More Sources Upgrade Now!"
+msgstr ""
+
+#: admin/view/general-settings.php:136
+#: admin/view/partial/featured-general.php:59
+#: admin/view/partial/ticker-content.php:39
+msgid "Number of News"
+msgstr ""
+
+#: admin/view/general-settings.php:144
+msgid "Layout"
+msgstr ""
+
+#: admin/view/general-settings.php:148
+msgid "List"
+msgstr ""
+
+#: admin/view/general-settings.php:151
+msgid "Grid"
+msgstr ""
+
+#: admin/view/general-settings.php:156
+msgid "For Ticker Upgrade Now!"
+msgstr ""
+
+#: admin/view/general-settings.php:163
+msgid "Ticker"
+msgstr ""
+
+#: admin/view/general-settings.php:171
+msgid "Grid View Columns"
+msgstr ""
+
+#: admin/view/general-settings.php:179 admin/view/partial/ticker-content.php:79
+msgid "Ticker Type"
+msgstr ""
+
+#: admin/view/general-settings.php:192 admin/view/partial/ticker-content.php:92
+msgid "Marquee"
+msgstr ""
+
+#: admin/view/general-settings.php:195 admin/view/partial/ticker-content.php:95
+msgid "Horizontal"
+msgstr ""
+
+#: admin/view/general-settings.php:198 admin/view/partial/ticker-content.php:98
+msgid "Typewriter"
+msgstr ""
+
+#: admin/view/general-settings.php:201
+#: admin/view/partial/ticker-content.php:101
+msgid "Vertical"
+msgstr ""
+
+#: admin/view/general-settings.php:209
+#: admin/view/partial/featured-general.php:19
+msgid "Title Word Length"
+msgstr ""
+
+#: admin/view/general-settings.php:217
+msgid "Description Word Length"
+msgstr ""
+
+#: admin/view/general-settings.php:225
+msgid "Display Source"
+msgstr ""
+
+#: admin/view/general-settings.php:233
+msgid "Display Date"
+msgstr ""
+
+#: admin/view/general-settings.php:241 admin/view/partial/general.php:42
+msgid "Enable RTL"
+msgstr ""
+
+#: admin/view/general-settings.php:261
+#: admin/view/partial/featured-general.php:79
+#: admin/view/partial/ticker-content.php:109
+msgid "Shortcode"
+msgstr ""
+
+#: admin/view/general-settings.php:265
+msgid "Use this shortcode in a page, post or widget area to display your desired news."
+msgstr ""
+
+#: admin/view/help-usage.php:14
+msgid "Available Shortcoded Options For Pro Version"
+msgstr ""
+
+#: admin/view/help-usage.php:16
+msgid "Display Grid View"
+msgstr ""
+
+#: admin/view/help-usage.php:19
+msgid "Display List View"
+msgstr ""
+
+#: admin/view/help-usage.php:22
+msgid "Display News Ticker"
+msgstr ""
+
+#: admin/view/help-usage.php:25
+msgid "Control Display Number"
+msgstr ""
+
+#: admin/view/help-usage.php:28
+msgid "Display With News Source"
+msgstr ""
+
+#: admin/view/help-usage.php:36
+msgid "Source"
+msgstr ""
+
+#: admin/view/help-usage.php:37 admin/view/help-usage.php:69
+#: admin/view/partial/general.php:24
+msgid "Name"
+msgstr ""
+
+#: admin/view/help-usage.php:38
+msgid "Url"
+msgstr ""
+
+#: admin/view/help-usage.php:60
+msgid "Display With Country"
+msgstr ""
+
+#: admin/view/help-usage.php:68
+msgid "Country"
+msgstr ""
+
+#: admin/view/help-usage.php:87
+msgid "Hide Description"
+msgstr ""
+
+#: admin/view/help-usage.php:90
+msgid "Control Description Length"
+msgstr ""
+
+#: admin/view/manage-cache.php:33
+msgid "Cache Cleared Successfully"
+msgstr ""
+
+#: admin/view/manage-cache.php:42
+msgid "Click Here to Clear Cache"
+msgstr ""
+
+#: admin/view/manage-cache.php:50
+msgid "Caching Time"
+msgstr ""
+
+#: admin/view/manage-cache.php:54
+msgid "1 Hour"
+msgstr ""
+
+#: admin/view/manage-cache.php:57
+msgid "6 Hour"
+msgstr ""
+
+#: admin/view/manage-cache.php:60
+msgid "12 Hour"
+msgstr ""
+
+#: admin/view/manage-cache.php:63
+msgid "24 Hour"
+msgstr ""
+
+#: admin/view/manage-cache.php:67
+msgid "For free API users we recommend to set caching time to 24 Hours"
+msgstr ""
+
+#: admin/view/manage-cache.php:71
+msgid "Save Caching Time"
+msgstr ""
+
+#: admin/view/partial/featured-general.php:39
+#: admin/view/partial/ticker-content.php:19
+msgid "Display Only Todays"
+msgstr ""
+
+#: admin/view/partial/featured-general.php:83
+msgid "Use this shortcode to display featured news."
+msgstr ""
+
+#: admin/view/partial/general.php:19
+msgid "Order With"
+msgstr ""
+
+#: admin/view/partial/general.php:23
+msgid "Select One"
+msgstr ""
+
+#: admin/view/partial/general.php:25
+msgid "Date"
+msgstr ""
+
+#: admin/view/partial/general.php:26
+msgid "Post Order"
+msgstr ""
+
+#: admin/view/partial/general.php:30
+msgid "Order By"
+msgstr ""
+
+#: admin/view/partial/general.php:34
+msgid "Ascending"
+msgstr ""
+
+#: admin/view/partial/general.php:37
+msgid "Descending"
+msgstr ""
+
+#: admin/view/partial/general.php:50
+msgid "News Per Page"
+msgstr ""
+
+#: admin/view/partial/general.php:58
+msgid "Display Pagination"
+msgstr ""
+
+#: admin/view/partial/news-information.php:17
+msgid "Breaking"
+msgstr ""
+
+#: admin/view/partial/news-information.php:23
+#: admin/view/partial/news-information.php:43
+#: admin/view/partial/news-information.php:63
+msgid "Upgrade Now"
+msgstr ""
+
+#: admin/view/partial/news-information.php:37
+msgid "Display In Hero"
+msgstr ""
+
+#: admin/view/partial/news-information.php:57
+msgid "Is Featured"
+msgstr ""
+
+#: admin/view/partial/news-information.php:77
+msgid "Status"
+msgstr ""
+
+#: admin/view/partial/news-information.php:81
+msgid "Active"
+msgstr ""
+
+#: admin/view/partial/news-information.php:84
+msgid "Inactive"
+msgstr ""
+
+#: admin/view/partial/ticker-content.php:59
+msgid "Ticker Label Text"
+msgstr ""
+
+#: admin/view/partial/ticker-content.php:113
+msgid "Use this shortcode to display ticker news."
+msgstr ""
+
+#: admin/view/partial/ticker-styles.php:20
+msgid "Ticker Label"
+msgstr ""
+
+#: admin/view/partial/ticker-styles.php:25
+#: admin/view/partial/ticker-styles.php:91
+msgid "Background Color"
+msgstr ""
+
+#: admin/view/partial/ticker-styles.php:44
+#: admin/view/partial/ticker-styles.php:110
+msgid "Font Color"
+msgstr ""
+
+#: admin/view/partial/ticker-styles.php:65
+msgid "Font Size"
+msgstr ""
+
+#: admin/view/partial/ticker-styles.php:86
+msgid "Ticker Content"
+msgstr ""
+
+#: admin/view/partial/ticker-styles.php:131
+msgid "Border Width"
+msgstr ""
+
+#: admin/view/partial/ticker-styles.php:149
+msgid "Border Color"
+msgstr ""
+
+#: admin/view/settings.php:22
+msgid "General"
+msgstr ""
+
+#: admin/view/ticker.php:9
+msgid "Ticker News Settings"
+msgstr ""
+
+#: admin/view/ticker.php:25
+msgid "Styles"
+msgstr ""
+
+#: freemius/templates/account/partials/site.php:339
+msgid " "
+msgstr ""
+
+#: front/view/external.php:71
+msgid "No news available right now!"
+msgstr ""
+
+#: front/view/external.php:114
+msgid "No Data Available"
+msgstr ""
+
+#: front/view/featured.php:91 front/view/hero.php:68
+#: front/view/internal.php:149 front/view/ticker.php:105
+msgid "No News Available"
+msgstr ""
+
+#: front/view/internal.php:137
+msgid "« "
+msgstr ""
+
+#: front/view/internal.php:138
+msgid " »"
+msgstr ""
+
+#: front/view/temp/grid.php:36 view/grid.php:41
+msgid "View More"
+msgstr ""
+
+#: lib/freemius-integrator.php:61
+#, php-format
+msgid "Hey %1$s"
+msgstr ""
+
+#: lib/freemius-integrator.php:62
+#, php-format
+msgid "Please help us improve %2$s! If you opt-in, some data about your usage of %2$s will be sent to %5$s. If you skip this, that's okay! %2$s will still work just fine."
+msgstr ""
+
+#: view/ticker.php:32
+msgid "Breaking News"
+msgstr ""
