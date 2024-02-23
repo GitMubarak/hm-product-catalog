@@ -3,8 +3,8 @@ Contributors: hmplugin, mhmrajib
 Donate link: https://www.paypal.me/mhmrajib
 Tags: catalog, affiliate, amazon, amazon affiliates, store
 Requires at least: 5.2
-Tested up to: 6.2.2
-Stable tag: 1.7.2
+Tested up to: 6.4.3
+Stable tag: 1.7.3
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -150,6 +150,9 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 
 
 == Changelog ==
+
+= 1.7.3 =
+* Admin
 
 = 1.7.2 =
 * Admin bug fixed
