@@ -152,7 +152,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 == Changelog ==
 
 = 1.7.3 =
-* Admin
+* Display a default image if there is no thumbnail available
 
 = 1.7.2 =
 * Admin bug fixed

@@ -111,12 +111,9 @@ if ( $wphpcProducts->have_posts() ) {
         <div class="wphpc-item">
           <div class="wphpc-image-box">
             <?php
-            if ( has_post_thumbnail() ) {
-              $attachment_ids[0]  = get_post_thumbnail_id( $post->ID );
-              $attachment         = wp_get_attachment_image_src( $attachment_ids[0], 'medium' );
-              $wphpc_image_url    = $attachment[0];
-            } else { 
-              $wphpc_image_url    = '';
+            $wphpc_image_url = WPHPC_ASSETS . 'img/no-image.jpg';
+            if ( get_the_post_thumbnail( get_the_ID() ) ) {
+              echo $feat_image = get_the_post_thumbnail(  $post->ID, $wbg_book_cover_resulution );
             }
             ?>
             <img src="<?php echo esc_url( $wphpc_image_url ); ?>" alt="<?php the_title(); ?>">

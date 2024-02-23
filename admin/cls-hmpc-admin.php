@@ -28,7 +28,7 @@ class WPHPC_Admin {
 			'',
 			'wphpc-admin-settings',
 			'',
-			WPHPC_ASSETS . 'img/hmplugin-icon.png',
+			'dashicons-products',
 			25
 		);
 
