@@ -17,7 +17,7 @@ class WPHPC_Master {
 		$this->wphpc_load_dependencies();
 		$this->wphpc_trigger_admin_hooks();
 		$this->wphpc_trigger_front_hooks();
-		//$this->wphpc_trigger_widget_hooks();
+		$this->wphpc_trigger_widget_hooks();
 	}
 
 	function hpc_load_plugin_textdomain(){
