@@ -79,6 +79,13 @@ HM Products Catalog is a simple, effective and powerful plugin to create an affi
 [HM Product Catalog: See Demo](https://hmplugin.com/demo/products/)
 
 
+**📋 Translation Ready:**
+
+* POT file included (/languages/)
+* Bengoli (bn_BD)
+* Portuguese (pt_PT)
+
+
 **👍 Feedback/Rating:**
 If you find this plugin helpful, feel free to give us your valuable review. Rate us and share this plugin with your friends and others. This will motivate us and help us to grow.
 [Rate Us](https://wordpress.org/support/plugin/hm-product-catalog/reviews/#new-post)
@@ -156,6 +163,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 * Thumbnail bug fixed
 * CSS fixed
 * Bangla translation added
+* Portuguese translation added
 
 = 1.7.2 =
 * Admin bug fixed

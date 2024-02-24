@@ -41,6 +41,7 @@ class WPHPC_Admin {
 			array( $this, WPHPC_PRFX . 'settings' )
 		);
 
+		/*
 		add_submenu_page(
 			'wphpc-admin-settings',
 			__( 'Help & Usage', 'hm-product-catalog' ),
@@ -49,6 +50,7 @@ class WPHPC_Admin {
 			'wphpc-get-help',
 			array( $this, WPHPC_PRFX . 'get_help' )
 		);
+		*/
 	}
 
 	/**
