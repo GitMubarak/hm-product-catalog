@@ -1,0 +1,296 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: HM Product Catalog\n"
+"POT-Creation-Date: 2024-02-24 21:21+0600\n"
+"PO-Revision-Date: 2024-02-24 15:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: Bengali (Bangladesh)\n"
+"Language: bn_BD\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: _e;esc_htm;esc_attr;esc_html_e;esc_html_;__(;__\n"
+"X-Poedit-SearchPath-0: .\n"
+"\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.6.6; wp-6.4.3"
+
+#: admin/cls-hmpc-admin.php:26 admin/cls-hmpc-admin.php:27
+msgid "HM Product Catalog"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:37 admin/cls-hmpc-admin.php:38
+#: admin/view/wphpc-admin-settings.php:23
+msgid "General Settings"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:46 admin/cls-hmpc-admin.php:47
+msgid "Help & Usage"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:83 admin/cls-hmpc-admin.php:85
+msgid "Products"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:84
+msgid "Product"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:86
+msgid "Parent Product"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:87
+msgid "All Products"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:88
+msgid "View Product"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:89
+msgid "Add New Product"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:90
+msgid "Add New"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:91
+msgid "Edit Product"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:92
+msgid "Update Product"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:93
+msgid "Search Product"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:94
+msgid "Not Found"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:95
+msgid "Not found in Trash"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:99
+msgid "products"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:100
+msgid "Description For Products"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:127
+msgid "Search Product Catalog"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:128
+msgid "All Catalogs"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:129
+msgid "Parent Product Catalog"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:130
+msgid "Parent Product Catalog:"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:131
+msgid "Edit Product Catalog"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:132
+msgid "Update Product Catalog"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:133
+msgid "Add New Catalog"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:134
+msgid "New Product Catalog Name"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:135
+msgid "Product Catalogs"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:150
+msgid "Search Product Categories"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:151
+msgid "All Categories"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:152
+msgid "Parent Product Category"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:153
+msgid "Parent Product Category:"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:154
+msgid "Edit Product Category"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:155
+msgid "Update Product Category"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:156
+msgid "Add New Category"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:157
+msgid "New Product Category Name"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:158
+msgid "Product Categories"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:174
+msgid "Product Details"
+msgstr ""
+
+#: admin/cls-hmpc-admin.php:183
+msgid "Product Short Description"
+msgstr ""
+
+#: admin/view/partial/product-details.php:5
+msgid "Product Type"
+msgstr ""
+
+#: admin/view/partial/product-details.php:9
+msgid "Simple"
+msgstr ""
+
+#: admin/view/partial/product-details.php:12
+msgid "External/Affiliate"
+msgstr ""
+
+#: admin/view/partial/product-details.php:17
+msgid "Product URL"
+msgstr ""
+
+#: admin/view/partial/product-details.php:21
+msgid "Enter the external URL to the product"
+msgstr ""
+
+#: admin/view/partial/product-details.php:26
+msgid "SKU/Product Id:"
+msgstr ""
+
+#: admin/view/partial/product-details.php:34
+msgid "Weight:"
+msgstr ""
+
+#: admin/view/partial/product-details.php:42
+msgid "Regular Price:"
+msgstr ""
+
+#: admin/view/partial/product-details.php:51
+msgid "Sale Price:"
+msgstr ""
+
+#: admin/view/partial/product-details.php:60
+msgid "Stock Status"
+msgstr ""
+
+#: admin/view/partial/product-details.php:64
+msgid "In stock"
+msgstr ""
+
+#: admin/view/partial/product-details.php:67
+msgid "Out of stock"
+msgstr ""
+
+#: admin/view/partial/product-details.php:72
+msgid "Status"
+msgstr ""
+
+#: admin/view/partial/product-details.php:76
+msgid "Active"
+msgstr ""
+
+#: admin/view/partial/product-details.php:79
+msgid "Inactive"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:41
+msgid "Currency:"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:62
+msgid "Single Page in New Tab?"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:72
+msgid "Category Label Text:"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:82
+msgid "Price Label Text:"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:92
+msgid "Products Columns:"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:96
+msgid "--Select One--"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:99
+msgid "2"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:103
+msgid "3"
+msgstr ""
+
+#: admin/view/wphpc-admin-settings.php:107
+msgid "4"
+msgstr ""
+
+#: front/view/loop.php:178
+msgid "« "
+msgstr ""
+
+#: front/view/loop.php:179
+msgid " »"
+msgstr ""
+
+#: front/view/loop.php:190
+msgid "No products found!"
+msgstr ""
+
+#: front/view/single.php:104
+msgid "Buy Now"
+msgstr ""
+
+#: front/view/single.php:144
+msgid "Description"
+msgstr ""
+
+#: front/view/single.php:155
+msgid "Back"
+msgstr ""
+
+#: front/view/single.php:167
+msgid "No sidebar registered"
+msgstr ""
+
+#: hm-product-catalog.php:36
+msgid "Donate us"
+msgstr ""

@@ -155,6 +155,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 * Display a default image if there is no thumbnail available
 * Thumbnail bug fixed
 * CSS fixed
+* Bangla translation added
 
 = 1.7.2 =
 * Admin bug fixed
