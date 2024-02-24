@@ -17,6 +17,7 @@ class WPHPC_Master {
 		$this->wphpc_load_dependencies();
 		$this->wphpc_trigger_admin_hooks();
 		$this->wphpc_trigger_front_hooks();
+		//$this->wphpc_trigger_widget_hooks();
 	}
 
 	function hpc_load_plugin_textdomain(){
@@ -29,6 +30,8 @@ class WPHPC_Master {
 		require_once WPHPC_PATH . 'front/' . WPHPC_CLS_PRFX . 'front.php';
 		require_once WPHPC_PATH . 'inc/' . WPHPC_CLS_PRFX . 'loader.php';
 		$this->wphpc_loader = new WPHPC_Loader();
+
+		require_once WPHPC_PATH . 'widget/' . 'cls-hmpc-widget-category.php';
 	}
 
 	private function wphpc_trigger_admin_hooks() {
@@ -47,6 +50,15 @@ class WPHPC_Master {
 		$this->wphpc_loader->add_action( 'wp_enqueue_scripts', $wphpc_front, WPHPC_PRFX . 'front_assets' );
 		$this->wphpc_loader->add_filter( 'single_template', $wphpc_front, WPHPC_PRFX . 'load_single_template', 99 );
 		$wphpc_front->wphpc_load_shortcode();
+	}
+
+	private function wphpc_trigger_widget_hooks() {
+
+		new Hmpc_Widget_Category();
+		add_action('widgets_init', function() { 
+			
+			register_widget('Hmpc_Widget_Category'); 
+		});
 	}
 
 	function wphpc_run() {

@@ -164,6 +164,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 * CSS fixed
 * Bangla translation added
 * Portuguese translation added
+* Home page query string issue fixed
 
 = 1.7.2 =
 * Admin bug fixed

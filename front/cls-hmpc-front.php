@@ -16,50 +16,34 @@ class WPHPC_Front {
 	}
 	
 	function wphpc_front_assets() {
+
+		wp_enqueue_style(	'wphpc-jquery-ui',
+							WPHPC_ASSETS . 'css/jquery-ui.css',
+							array(),
+							$this->wphpc_version,
+							FALSE );
+
+		wp_enqueue_style(	'wphpc-front',
+							WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'front.css',
+							array(),
+							$this->wphpc_version,
+							FALSE );
+
+		if ( ! wp_script_is( 'jquery' ) ) {
+			wp_enqueue_script('jquery');
+		}
 		
-		global $post;
-    	
-		if ( has_shortcode( $post->post_content, 'hm_product_catalog') ) {
+		wp_enqueue_script(  'wphpc-jquery-ui',
+							WPHPC_ASSETS . 'js/jquery-ui.js',
+							array('jquery'),
+							$this->wphpc_version,
+							TRUE );
 
-			wp_enqueue_style(	'wphpc-jquery-ui',
-								WPHPC_ASSETS . 'css/jquery-ui.css',
-								array(),
-								$this->wphpc_version,
-								FALSE );
-
-			wp_enqueue_style(	'wphpc-front',
-								WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'front.css',
-								array(),
-								$this->wphpc_version,
-								FALSE );
-
-			if ( ! wp_script_is( 'jquery' ) ) {
-				wp_enqueue_script('jquery');
-			}
-			
-			wp_enqueue_script(  'wphpc-jquery-ui',
-								WPHPC_ASSETS . 'js/jquery-ui.js',
-								array('jquery'),
-								$this->wphpc_version,
-								TRUE );
-
-			wp_enqueue_script(  'wphpc-front',
-								WPHPC_ASSETS . 'js/wphpc-front.js',
-								array('jquery'),
-								$this->wphpc_version,
-								TRUE );
-		}
-
-		if ( 'products' === $post->post_type ) {
-			
-			wp_enqueue_style(	'wphpc-single',
-								WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'single.css',
-								array(),
-								$this->wphpc_version,
-								FALSE );
-
-		}
-
+		wp_enqueue_script(  'wphpc-front',
+							WPHPC_ASSETS . 'js/wphpc-front.js',
+							array('jquery'),
+							$this->wphpc_version,
+							TRUE );
 	}
 
 	function wphpc_load_shortcode() {
@@ -84,7 +68,7 @@ class WPHPC_Front {
 
 		global $post;
 		
-		if ( 'products' === $post->post_type && locate_template( array( 'wphpc-single-product.php' ) ) !== $template ) {
+		if ( 'products' === $post->post_type  ) {
 			return WPHPC_PATH . 'front/view/single.php';
 		}
 

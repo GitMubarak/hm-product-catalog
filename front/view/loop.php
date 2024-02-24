@@ -3,6 +3,8 @@ if ( ! defined('ABSPATH') ) exit;
 
 global $post;
 
+echo 'Hello';
+
 $wphpcGeneralSettings   = stripslashes_deep( unserialize( get_option('wphpc_general_settings') ) );
 $wphpcCurrency          = isset( $wphpcGeneralSettings['wphpc_currency'] ) ? $wphpcGeneralSettings['wphpc_currency'] : '';
 $wphpcDetailsIsSxternal = ($wphpcGeneralSettings['wphpc_details_is_external'] == 1) ? ' target="_blank"' : '';
@@ -38,24 +40,24 @@ $wphpcProductsArr = array(
 // Sorting operation
 // if your meta value is not numeric for example if it is a date value; than you can add parameter meta_type => DATE
 // Possible values are; 'NUMERIC', 'BINARY', 'CHAR', 'DATE', 'DATETIME', 'DECIMAL', 'SIGNED', 'TIME', 'UNSIGNED'
-if ( isset( $_GET['orderby'] ) && ( $_GET['orderby'] === 'price' ) ) {
+if ( isset( $_GET['sorting-by'] ) && ( $_GET['sorting-by'] === 'price' ) ) {
   $wphpcProductsArr['meta_key'] = 'wphpc_regular_price';
   $wphpcProductsArr['orderby'] = 'meta_value_num';
   $wphpcProductsArr['meta_type'] = 'DECIMAL';
   $wphpcProductsArr['order'] = 'ASC';
 }
-if ( isset( $_GET['orderby'] ) && ( $_GET['orderby'] === 'price-desc' ) ) {
+if ( isset( $_GET['sorting-by'] ) && ( $_GET['sorting-by'] === 'price-desc' ) ) {
   $wphpcProductsArr['meta_key'] = 'wphpc_regular_price';
   $wphpcProductsArr['orderby'] = 'meta_value_num';
   $wphpcProductsArr['meta_type'] = 'DECIMAL';
   $wphpcProductsArr['order'] = 'DESC';
 }
-if ( isset( $_GET['orderby'] ) && ( $_GET['orderby'] === 'date' ) ) {
+if ( isset( $_GET['sorting-by'] ) && ( $_GET['sorting-by'] === 'date' ) ) {
   $wphpcProductsArr['orderby'] = 'date';
   $wphpcProductsArr['order'] = 'DESC';
   $wphpcProductsArr['suppress_filters'] = true;
 }
-if ( isset( $_GET['orderby'] ) && ( $_GET['orderby'] === 'default' ) ) {
+if ( isset( $_GET['sorting-by'] ) && ( $_GET['sorting-by'] === 'default' ) ) {
   $wphpcProductsArr['orderby'] = 'date';
   $wphpcProductsArr['order'] = 'DESC';
   $wphpcProductsArr['suppress_filters'] = true;
@@ -145,9 +147,9 @@ if ( $wphpcProducts->have_posts() ) {
             $wphpcRegularPrice  = get_post_meta($post->ID, 'wphpc_regular_price', true);
             $wphpcSalePrice     = get_post_meta($post->ID, 'wphpc_sale_price', true);
             if ( empty( $wphpcSalePrice ) ) {
-              echo ( ! empty( $wphpcRegularPrice ) ) ? '<span class="wphpc-price price-after">' . esc_html( $wphpcCurrencySymbol ) . '&nbsp;' . $wphpcRegularPrice . '</span>' : '';
+              echo ( ! empty( $wphpcRegularPrice ) ) ? '<span class="wphpc-price price-after">' . esc_html( $wphpcCurrencySymbol ) . $wphpcRegularPrice . '</span>' : '';
             } else {
-              echo '<span class="wphpc-price price-before">' . esc_html( $wphpcCurrencySymbol ) . '&nbsp;' . $wphpcRegularPrice . '</span> <span class="wphpc-price price-after">' . esc_html( $wphpcCurrencySymbol ) . '&nbsp;' . $wphpcSalePrice . '</span>';
+              echo '<span class="wphpc-price price-before">' . esc_html( $wphpcCurrencySymbol ) . $wphpcRegularPrice . '</span> <span class="wphpc-price price-after">' . esc_html( $wphpcCurrencySymbol ) . $wphpcSalePrice . '</span>';
             }
             ?>
           </div>

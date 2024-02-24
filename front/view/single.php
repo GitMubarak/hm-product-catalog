@@ -24,6 +24,9 @@ $wphpc_product_url      = get_post_meta( $post->ID, 'wphpc_product_url', true );
 $wphpcShortDescription  = get_post_meta( $post->ID, 'wphpc_short_description', true );
 $wphpc_stock_status     = get_post_meta( $post->ID, 'wphpc_stock_status', true );
 $wphpc_weight           = get_post_meta( $post->ID, 'wphpc_weight', true );
+
+// Load Styling
+include WPHPC_PATH . 'assets/css/single.css';
 ?>
 <div class="wphpc-single-section clearfix">
 

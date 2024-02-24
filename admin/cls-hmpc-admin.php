@@ -16,6 +16,31 @@ class WPHPC_Admin {
 		$this->wphpc_assets_prefix = substr(WPHPC_PRFX, 0, -1) . '-';
 	}
 
+	/**
+	 *	Loading admin panel assets
+	 */
+	function wphpc_enqueue_assets() {
+
+		wp_enqueue_style(
+			$this->wphpc_assets_prefix . 'admin-style',
+			WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'admin.css',
+			array(),
+			$this->wphpc_version,
+			FALSE
+		);
+
+		if ( ! wp_script_is('jquery') ) {
+			wp_enqueue_script('jquery');
+		}
+
+		wp_enqueue_script(
+			$this->wphpc_assets_prefix . 'admin-script',
+			WPHPC_ASSETS . 'js/' . $this->wphpc_assets_prefix . 'admin.js',
+			array('jquery'),
+			$this->wphpc_version,
+			TRUE
+		);
+	}
 
 	/**
 	 *	Loading admin menu
@@ -51,32 +76,6 @@ class WPHPC_Admin {
 			array( $this, WPHPC_PRFX . 'get_help' )
 		);
 		*/
-	}
-
-	/**
-	 *	Loading admin panel assets
-	 */
-	function wphpc_enqueue_assets() {
-
-		wp_enqueue_style(
-			$this->wphpc_assets_prefix . 'admin-style',
-			WPHPC_ASSETS . 'css/' . $this->wphpc_assets_prefix . 'admin.css',
-			array(),
-			$this->wphpc_version,
-			FALSE
-		);
-
-		if ( ! wp_script_is('jquery') ) {
-			wp_enqueue_script('jquery');
-		}
-
-		wp_enqueue_script(
-			$this->wphpc_assets_prefix . 'admin-script',
-			WPHPC_ASSETS . 'js/' . $this->wphpc_assets_prefix . 'admin.js',
-			array('jquery'),
-			$this->wphpc_version,
-			TRUE
-		);
 	}
 
 	function wphpc_custom_post_type() {

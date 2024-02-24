@@ -193,7 +193,6 @@
     color: #ff7162;
     font-size: 16px;
     line-height: 26px;
-    font-weight: 700;
 }
 
 .regular-price span.wphpc-price.single {
@@ -204,13 +203,12 @@
 }
 
 .regular-price span.price-before {
-    color: #ff7162;
+    color: #999;
     text-decoration: line-through;
-    font-style: italic;
 }
 
 .regular-price span.price-after {
-    color: #13b651;
+    color: #333;
 }
 
 
