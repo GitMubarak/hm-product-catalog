@@ -113,7 +113,7 @@ if ( $wphpcProducts->have_posts() ) {
             <?php
             $wphpc_image_url = WPHPC_ASSETS . 'img/no-image.jpg';
             if ( get_the_post_thumbnail( get_the_ID() ) ) {
-              echo $feat_image = get_the_post_thumbnail(  $post->ID, $wbg_book_cover_resulution );
+              $wphpc_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
             }
             ?>
             <img src="<?php echo esc_url( $wphpc_image_url ); ?>" alt="<?php the_title(); ?>">
