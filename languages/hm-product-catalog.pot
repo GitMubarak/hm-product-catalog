@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-06-22 21:03+0600\n"
+"POT-Creation-Date: 2024-02-24 21:21+0600\n"
 "PO-Revision-Date: 2021-12-27 04:06+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: _e;esc_htm;esc_attr;esc_html_e;esc_html_;__(;__\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -261,15 +261,15 @@ msgstr ""
 msgid "4"
 msgstr ""
 
-#: front/view/loop.php:181
+#: front/view/loop.php:178
 msgid "« "
 msgstr ""
 
-#: front/view/loop.php:182
+#: front/view/loop.php:179
 msgid " »"
 msgstr ""
 
-#: front/view/loop.php:193
+#: front/view/loop.php:190
 msgid "No products found!"
 msgstr ""
 
