@@ -36,6 +36,7 @@ class Hmpc_Widget_Category extends WP_Widget {
 		}
 
 		//$wbg_wl_dnld_btn_font_clr 	= isset( $instance['wbg_wl_dnld_btn_font_clr'] ) ? sanitize_text_field( $instance['wbg_wl_dnld_btn_font_clr'] ) : '#FFFFFF';
+        $get_category     =  isset( $_GET['category'] ) ? esc_html( $_GET['category'] ) : '';
 
         $product_categories  = get_terms( array( 'taxonomy' => 'product_category', 'hide_empty' => true, 'order' => 'ASC',  'parent' => 0 ) );
         ?>
@@ -50,13 +51,14 @@ class Hmpc_Widget_Category extends WP_Widget {
             }
             .hmpc-widget-category-a-id:hover {
                 background: #F2F2F2;
+                color: #CC0000;
             }
         </style>
         <?php
         foreach ( $product_categories as $p_cat ) { 
             ?>
-            <a href="#" class="hmpc-widget-category-a-id">
-                <input type="checkbox" name="wphpc_details_is_external" id="hmpc-category-<?php esc_attr_e( $p_cat->slug ); ?>" value="<?php esc_attr_e( $p_cat->name ); ?>">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="hmpc-widget-category-a-id" data-category="<?php esc_attr_e( urlencode( $p_cat->name ) ); ?>">
+                <input type="checkbox" name="wphpc_details_is_external" id="hmpc-category-<?php esc_attr_e( $p_cat->slug ); ?>" value="<?php esc_attr_e( $p_cat->name ); ?>" <?php echo ( $get_category == urlencode( $p_cat->name ) ) ? 'checked' : null; ?>>
                 <label for="hmpc-category-<?php esc_attr_e( $p_cat->slug ); ?>"><?php esc_html_e( $p_cat->name ); ?></label>
             </a>
             <?php

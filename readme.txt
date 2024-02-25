@@ -165,6 +165,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 * Bangla translation added
 * Portuguese translation added
 * Home page query string issue fixed
+* Category widget to search by category implemented
 
 = 1.7.2 =
 * Admin bug fixed

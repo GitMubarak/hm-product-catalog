@@ -31,4 +31,12 @@
         };
     }
 
+    $(document).on('click', '.hmpc-widget-category-a-id', function(event) {
+        event.preventDefault();
+        var url = new URL($(this).attr("href"));
+        var urlParam = $(this).data('category');
+        url.searchParams.set('category', urlParam);
+        window.location.href = url.href;
+    });
+
 })(window, jQuery);

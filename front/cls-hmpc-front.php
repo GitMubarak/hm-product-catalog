@@ -52,11 +52,6 @@ class WPHPC_Front {
 	
 	function wphpc_load_shortcode_view( $attr ) {
 		
-		// Assign all shortcode params
-		$wphpcCatelog 		= isset( $attr['catalog']) ? $attr['catalog'] : '';
-		$wphpcDisplay		= isset( $attr['display']) ? $attr['display'] : '';
-		$wphpcPagination	= isset( $attr['pagination']) ? $attr['pagination'] : false;
-
 		$output = '';
 		ob_start();
 		include WPHPC_PATH . 'front/view/loop.php';
