@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Hmpc_Widget_Category extends WP_Widget {
 
 	function __construct() {
-		parent::__construct('hmpc-widget', __('Product Category', 'hm-product-catalog'), array('description' => __('Product Category', 'hm-product-catalog')));
+		parent::__construct('hmpc-widget-category', __('Product Category', 'hm-product-catalog'), array('description' => __('Product Category', 'hm-product-catalog')));
 
 		add_action( 'load-widgets.php', array(&$this, 'hmpc_color_picker_load') );
 	}
@@ -35,30 +35,11 @@ class Hmpc_Widget_Category extends WP_Widget {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['hmpc_title'] ). $args['after_title'];
 		}
 
-		//$wbg_wl_dnld_btn_font_clr 	= isset( $instance['wbg_wl_dnld_btn_font_clr'] ) ? sanitize_text_field( $instance['wbg_wl_dnld_btn_font_clr'] ) : '#FFFFFF';
-        $get_category     =  isset( $_GET['category'] ) ? esc_html( $_GET['category'] ) : '';
-
         $product_categories  = get_terms( array( 'taxonomy' => 'product_category', 'hide_empty' => true, 'order' => 'ASC',  'parent' => 0 ) );
-        ?>
-        <style type="text/css">
-            .hmpc-widget-category-a-id {
-                display: block;
-                text-decoration: none;
-                color: #222;
-            }
-            .hmpc-widget-category-a-id label {
-                cursor: pointer;
-            }
-            .hmpc-widget-category-a-id:hover {
-                background: #F2F2F2;
-                color: #CC0000;
-            }
-        </style>
-        <?php
-        foreach ( $product_categories as $p_cat ) { 
+        
+		foreach ( $product_categories as $p_cat ) { 
             ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="hmpc-widget-category-a-id" data-category="<?php esc_attr_e( urlencode( $p_cat->name ) ); ?>">
-                <input type="checkbox" name="wphpc_details_is_external" id="hmpc-category-<?php esc_attr_e( $p_cat->slug ); ?>" value="<?php esc_attr_e( $p_cat->name ); ?>" <?php echo ( $get_category == urlencode( $p_cat->name ) ) ? 'checked' : null; ?>>
+            <a href="<?php echo get_permalink(); ?>" class="hmpc-widget-category-a-id" data-category="<?php esc_attr_e( urlencode( $p_cat->name ) ); ?>">
                 <label for="hmpc-category-<?php esc_attr_e( $p_cat->slug ); ?>"><?php esc_html_e( $p_cat->name ); ?></label>
             </a>
             <?php

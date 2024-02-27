@@ -110,6 +110,24 @@
 
 /*  Page number and Sorting Ended  */
 
+.hmpc-loop-parent-wrapper {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.hmpc-loop-parent-wrapper .hmpc-loop-parent-left {
+    width: 300px;
+    min-height: 100px;
+}
+
+.hmpc-loop-parent-wrapper .hmpc-loop-parent-right {
+    padding-left: 40px;
+    width: -webkit-calc(100% - 300px);
+    width: -moz-calc(100% - 300px);
+    width: calc(100% - 300px);
+}
+
 .wphpc-main-wrapper {
     border: 0px solid #CCC;
     display: grid;
@@ -191,8 +209,10 @@
     margin: 0px!important;
     padding: 0px!important;
     color: #ff7162;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .regular-price span.wphpc-price.single {
@@ -203,12 +223,13 @@
 }
 
 .regular-price span.price-before {
-    color: #999;
+    color: #ff7162;
     text-decoration: line-through;
+    opacity: 0.7;
 }
 
 .regular-price span.price-after {
-    color: #333;
+    color: #ff7162;
 }
 
 
@@ -296,6 +317,49 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
 }
 
 
+/* widget area started */
+
+.hmpc-loop-parent-wrapper .hmpc-loop-parent-left .hmpc-widget-category-a-id {
+    display: block;
+    text-decoration: none;
+    color: #2b3c6b;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hmpc-loop-parent-wrapper .hmpc-loop-parent-left .hmpc-widget-category-a-id label {
+    cursor: pointer;
+}
+
+.hmpc-loop-parent-wrapper .hmpc-loop-parent-left .hmpc-widget-category-a-id:hover {
+    color: #ff7162;
+}
+
+.hmpc-loop-parent-wrapper .hmpc-loop-parent-left .single-sidebar {
+    margin-bottom: 50px;
+}
+
+.hmpc-loop-parent-wrapper .hmpc-loop-parent-left .title {
+    margin-bottom: 30px;
+}
+
+.hmpc-loop-parent-wrapper .hmpc-loop-parent-left .title h3.hmpc-sidebar {
+    position: relative;
+    display: block;
+    font-size: 22px;
+    line-height: 30px;
+    color: #2b3c6b;
+    font-weight: 700 !important;
+    margin-bottom: 0px !important;
+}
+
+
+/* Widget area ended */
+
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 
 @media only screen and (min-width: 1025px) {
@@ -317,6 +381,14 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
 }
 
 @media only screen and (max-width: 767px) {
+    .hmpc-loop-parent-wrapper .hmpc-loop-parent-left,
+    .hmpc-loop-parent-wrapper .hmpc-loop-parent-right {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
     .item-sorting .select-column {
         display: block;
         margin-top: 20px;

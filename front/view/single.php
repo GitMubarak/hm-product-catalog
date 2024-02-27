@@ -164,11 +164,9 @@ include WPHPC_PATH . 'assets/css/single.css';
 
     <div class="wphpc-details-column wphpc-sidebar-right">
         <?php
-            if ( function_exists( 'register_sidebar' ) ) {
-                dynamic_sidebar();
-            } else {
-                _e('No sidebar registered', 'hm-product-catalog');
-            }
+        if ( function_exists( 'register_sidebar' ) ) {
+            dynamic_sidebar( 'Product Catalog Sidebar' );
+        }
         ?>
     </div>
 

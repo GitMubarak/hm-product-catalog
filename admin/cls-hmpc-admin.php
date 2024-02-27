@@ -276,5 +276,21 @@ class WPHPC_Admin {
 		</div>
 		<?php
 	}
+
+	function hmpc_register_sidebar() {
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Product Catalog Sidebar', 'hm-product-catalog' ),
+				'id'            => 'product-catalog-sidebar',
+				'description'   => '',
+				'class'         => 'sidebar',
+				'before_widget' => '<div id="%1$s" class="widget %2$s single-sidebar">',
+				'after_widget' => '</div>',
+				'before_title' => '<div class="title"><h3 class="hmpc-sidebar">',
+				'after_title' => '</h3></div>',
+			)
+		);
+	}
 }
 ?>

@@ -161,7 +161,7 @@ Alternatively you can go to Settings -> Permalinks -> Save changes, which calls 
 = 1.7.3 =
 * Display a default image if there is no thumbnail available
 * Thumbnail bug fixed
-* CSS fixed
+* Minor CSS fixed
 * Bangla translation added
 * Portuguese translation added
 * Home page query string issue fixed

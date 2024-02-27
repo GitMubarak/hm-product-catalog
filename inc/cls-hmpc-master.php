@@ -43,6 +43,7 @@ class WPHPC_Master {
 		$this->wphpc_loader->add_action( 'save_post', $wphpc_admin, WPHPC_PRFX . 'save_product_meta', 1, 1 );
 		$this->wphpc_loader->add_action( 'admin_menu', $wphpc_admin, WPHPC_PRFX . 'admin_menu', 0 );
 		//$this->wphpc_loader->add_filter( 'plugin_row_meta', $wphpc_admin, 'wphpc_donation_link_to_plugin_active', 10, 2 );
+		$this->wphpc_loader->add_action( 'widgets_init', $wphpc_admin, 'hmpc_register_sidebar');
 	}
 
 	function wphpc_trigger_front_hooks() {
