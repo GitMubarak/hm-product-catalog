@@ -33,17 +33,29 @@ class WPHPC_Front {
 			wp_enqueue_script('jquery');
 		}
 		
-		wp_enqueue_script(  'wphpc-jquery-ui',
-							WPHPC_ASSETS . 'js/jquery-ui.js',
-							array('jquery'),
-							$this->wphpc_version,
-							TRUE );
-
-		wp_enqueue_script(  'wphpc-front',
-							WPHPC_ASSETS . 'js/wphpc-front.js',
-							array('jquery'),
-							$this->wphpc_version,
-							TRUE );
+		wp_enqueue_script(
+			'wphpc-jquery-ui',
+			WPHPC_ASSETS . 'js/jquery-ui.js',
+			array('jquery'),
+			$this->wphpc_version,
+			TRUE 
+		);
+		/*
+		wp_enqueue_script(
+			'hmpc-price-slider',
+			WPHPC_ASSETS . 'js/price-slider.min.js',
+			array('jquery'),
+			$this->wphpc_version,
+			TRUE 
+		);
+		*/
+		wp_enqueue_script(
+			'wphpc-front',
+			WPHPC_ASSETS . 'js/wphpc-front.js',
+			array('jquery'),
+			$this->wphpc_version,
+			TRUE
+		);
 	}
 
 	function wphpc_load_shortcode() {

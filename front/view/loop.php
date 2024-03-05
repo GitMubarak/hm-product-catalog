@@ -19,6 +19,21 @@ if ( $wphpcProducts->have_posts() ) {
             dynamic_sidebar( 'Product Catalog Sidebar' );
         }
         ?>
+        <div style="width: 100%;">
+          <form method="get" action="<?php echo get_permalink(); ?>">
+            <div class="price_slider_wrapper" id="price_slider_wrapper">
+              <div class="price_slider_amount" data-step="10">
+                <input type="text" id="min_price" name="min_price" value="0" data-min="0" placeholder="Min price" style="display: none;">
+                <input type="text" id="max_price" name="max_price" value="500" data-max="500" placeholder="Max price" style="display: none;">
+                <button type="submit" class="button filter-btn">Filter</button>
+                <div class="price_label" style="">
+                  <span class="from">৳&nbsp;0</span> — <span class="to">৳&nbsp;500</span>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
       <div class="hmpc-loop-parent-right pull-right">
         <div class="item-sorting clearfix">

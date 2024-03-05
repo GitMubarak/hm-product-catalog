@@ -357,6 +357,77 @@ div.wphpc-pagination>ul.page-numbers>li>a.page-numbers:hover {
 }
 
 
+/* Price Slider Started */
+
+#price_slider_wrapper {
+    border: 0px;
+    border-top: 3px solid #EEE;
+}
+
+.price_slider_wrapper .ui-widget-content {
+    background: #EAECEB !important;
+    height: 4px !important;
+    border: none !important;
+    margin-bottom: 30px !important;
+    border: 0px;
+}
+
+.ui-slider .ui-slider-range {
+    background: #ff7162 !important;
+    top: -3px;
+    height: 3px;
+}
+
+.ui-slider .ui-slider-handle {
+    border: 3px solid #ff7162 !important;
+    top: -10px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: -10px;
+    position: absolute;
+    z-index: 2;
+    outline: 0;
+}
+
+.price_slider_amount {
+    text-align: right;
+    line-height: 2.4;
+    font-size: .8751em;
+    margin-top: 30px;
+}
+
+.price_slider_amount .button {
+    position: relative !important;
+    display: inline-block !important;
+    font-size: 14px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    color: #ffffff !important;
+    padding: 5px 21px 4px 20px !important;
+    border-radius: 10px !important;
+    transition: all 500ms ease !important;
+    line-height: 26px !important;
+    font-weight: 400 !important;
+    background: #F37064;
+    float: left;
+}
+
+.price_label {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    color: #222;
+    font-weight: 700;
+    margin-right: 16px;
+    top: 0px;
+}
+
+
+/* Price Slider Ended */
+
+
 /* Widget area ended */
 
 

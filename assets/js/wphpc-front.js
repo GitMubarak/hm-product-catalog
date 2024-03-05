@@ -39,4 +39,28 @@
         window.location.href = url.href;
     });
 
+    //Price Range Slider
+    if ($('#price_slider_wrapper').length) {
+
+        $("#price_slider_wrapper").slider({
+            range: true,
+            orientation: "horizontal",
+            min: 0,
+            max: 500,
+            values: [0, 500],
+            slide: function(event, ui) {
+                if (ui.values[0] == ui.values[1]) {
+                    return false;
+                }
+
+                $("#min_price").val(ui.values[0]);
+                $("#max_price").val(ui.values[1]);
+            }
+        });
+
+        $("#min_price").val($("#price_slider_wrapper").slider("values", 0));
+        $("#max_price").val($("#price_slider_wrapper").slider("values", 1));
+
+    }
+
 })(window, jQuery);
